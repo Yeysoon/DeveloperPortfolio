@@ -1,0 +1,33 @@
+nav ul {
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Color de fondo */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  text-align: center;
+}
+
+nav li {
+  float: left; /* Coloca los elementos de la lista horizontalmente */
+  text-align: center;
+}
+
+nav a {
+  display: block; /* Hace que el enlace ocupe todo el espacio del elemento de la lista */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  padding: 14px 16px; /* Espacio interno */
+  text-decoration: none; /* Quita el subrayado */
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #ddd; /* Color de fondo al pasar el ratón */
+  text-align: center;
+}
+
+nav a.active { /* Estilo para el enlace activo */
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
