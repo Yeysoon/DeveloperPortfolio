@@ -4,7 +4,7 @@ nav ul {
   padding: 0;
   background-color: #f0f0f0; /* Color de fondo */
   overflow: hidden; /* Evita que el contenido se desborde */
-  text-align: center;
+  justify-content: center;
 }
 
 nav li {
