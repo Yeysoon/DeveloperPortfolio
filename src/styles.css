@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Poppins', sans-serif; /* Apply to the whole body */
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif; /* Apply to headings */
+  font-weight: 700; /* Use the Bold weight */
+}
+
+.footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Use the Regular weight */
+}
+
+/* Example using a specific weight */
+.emphasized-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; /* Use the Medium weight */
+}
