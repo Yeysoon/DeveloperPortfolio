@@ -47,9 +47,14 @@ footer {
 }
 
 .footer-right {
+  position: absolute;
+  right: 40px; /* Ajusta la distancia del borde derecho */
+  top: 50%;    /* Centra verticalmente en el footer */
+  transform: translateY(-50%); /* Ajusta para centrar exactamente */
   display: flex;
-  gap: 10px;
+  gap: 15px;   /* Espacio entre los iconos */
 }
+
 
 .social-icon {
   color: #fff;
@@ -60,4 +65,16 @@ footer {
 
 .social-icon:hover {
   color: #aaa;
+}
+
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  transition: opacity 0.3s;
+}
+
+.social-icon img:hover {
+  opacity: 0.7;
 }
