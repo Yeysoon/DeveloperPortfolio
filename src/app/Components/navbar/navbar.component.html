@@ -1,21 +1,24 @@
 <nav>
-  <ul>
-
-    <li>
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-    </li>
-    <li>
-      <a routerLink="/experience" routerLinkActive="active">Experience</a>
-    </li>
-    <li>
-      <a routerLink="/projects" routerLinkActive="active">Proyects</a>
-    </li>
-    <li>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-    </li>
-    <li>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-    </li>
-  </ul>
+  <img src="/logos/Logotipo.png" alt="Logo" class="logo">
+  <div class="nav-container">
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active" class="nav-item">Home</a>
+      </li>
+      <li>
+        <a routerLink="/experience" routerLinkActive="active" class="nav-item">Experience</a>
+      </li>
+      <li>
+        <a routerLink="/projects" routerLinkActive="active" class="nav-item">Projects</a>
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="active" class="nav-item">About</a>
+      </li>
+      <li>
+        <a routerLink="/contact" routerLinkActive="active" class="nav-item">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <a href="/documents/CV.pdf" download class="download-btn">Descargar CV</a>
 </nav>
 <router-outlet></router-outlet>

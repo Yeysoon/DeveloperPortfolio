@@ -1,46 +1,63 @@
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  background-color: #1a1a1a; /* Fondo oscuro para la isla */
+  border-radius: 20px; /* Bordes redondeados para la isla */
+  padding: 10px 20px;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  display: flex; /* Activa Flexbox */
-  justify-content: center; /* Centra horizontalmente los elementos */
-  /* Otras propiedades que ya tenías */
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 nav li {
-  float: left; /* Coloca los elementos de la lista horizontalmente */
   text-align: center;
+  margin: 0 5px; /* Espacio entre los elementos */
 }
 
-nav a {
-  display: block; /* Hace que el enlace ocupe todo el espacio del elemento de la lista */
-  color: #333; /* Color del texto */
-  text-align: center; /* Centra el texto */
-  padding: 14px 16px; /* Espacio interno */
-  text-decoration: none; /* Quita el subrayado */
-  text-align: center;
+.nav-item {
+  color: #fff; /* Color del texto */
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, border-radius 0.3s;
+  background-color: transparent; /* Fondo transparente por defecto */
+  border-radius: 20px; /* Bordes redondeados */
 }
 
-nav a:hover {
-  background-color: #ddd; /* Color de fondo al pasar el ratón */
-  text-align: center;
+.nav-item:hover {
+  background-color: #555; /* Color de fondo al pasar el puntero */
 }
 
-nav a.active { /* Estilo para el enlace activo */
-  background-color: #4CAF50;
+.nav-item.active {
+  background-color: #f0f0f0; /* Color de fondo de la opción activa */
+  color: black;
+  border-radius: 20px; /* Bordes redondeados para la opción activa */
+}
+
+.logo {
+  height: 40px; /* Ajusta el tamaño del logo */
+  margin-left: 1rem;
+}
+
+.download-btn {
+  background-color: #007BFF; /* Color del botón de descarga */
   color: white;
-  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-left: 1rem; /* Espacio entre el logo y el botón */
 }
 
-
-/*Ajuta el tamaño proporcional de
-*/
-:host {
-  display: block;
-  width: 100%;
-  text-align: justify;
-  padding: 1rem;
+.download-btn:hover {
+  background-color: #0056b3; /* Color del botón al pasar el puntero */
 }
-
