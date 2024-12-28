@@ -1,0 +1,23 @@
+header {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  flex: 1; /* Hace que el contenido principal crezca para llenar el espacio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Altura total menos header y footer */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  flex-shrink: 0; /* Evita que se encoja */
+}

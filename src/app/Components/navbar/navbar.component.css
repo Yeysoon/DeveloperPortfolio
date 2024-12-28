@@ -33,3 +33,14 @@ nav a.active { /* Estilo para el enlace activo */
   color: white;
   text-align: center;
 }
+
+
+/*Ajuta el tamaño proporcional de
+*/
+:host {
+  display: block;
+  width: 100%;
+  text-align: justify;
+  padding: 1rem;
+}
+
