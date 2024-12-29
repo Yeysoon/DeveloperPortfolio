@@ -24,9 +24,10 @@ export class ContactComponent {
     const greetingElement = document.getElementById('greeting');
     if (greetingElement) {
       if (this.secondTimeSending) {
-        greetingElement.textContent = `¿Otro Mensaje ${name}😍?, Venga, cuéntame más. 😏 `;
+        greetingElement.textContent = `¿Otro Mensaje ${name}?
+        🥰 Venga, cuéntame más. 😏 `;
       } else {
-        greetingElement.textContent = `Hola ${name}, envíame un mensaje`;
+        greetingElement.textContent = `Hey ${name}, después de revisar mi perfil, ¿crees que encajo en tu equipo? Hazmelo Saber.`;
       }
     }
   }
@@ -63,8 +64,8 @@ export class ContactComponent {
       .then((result: { text: any; }) => {
         console.log('Mensaje enviado:', result.text);
         Swal.fire({
-          title: '¡Mensaje enviado con éxito!',
-          text: `Gracias por tu mensaje, ${this.contact.name}. En breve te responderé 😁.`,
+          title: '¡Enviado a Yeysoon!',
+          text: `Gracias por tu mensaje, ${this.contact.name}. En breve te respondo. 😊`,
           icon: 'success',
           confirmButtonText: 'Aceptar'
         }).then((result) => {
@@ -76,7 +77,6 @@ export class ContactComponent {
               denyButtonText: 'No',
             }).then((result) => {
               if (result.isConfirmed) {
-                // Reiniciar el formulario pero mantener el nombre
                 const name = this.contact.name;
                 contactForm.resetForm({ name: name });
                 this.contact.email = '';
@@ -84,7 +84,7 @@ export class ContactComponent {
                 this.secondTimeSending = true;
                 this.updateGreeting();
               } else if (result.isDenied) {
-                this.router.navigate(['/home']);  // Redirigir a la página principal
+                this.router.navigate(['/home']);
               }
             });
           }
