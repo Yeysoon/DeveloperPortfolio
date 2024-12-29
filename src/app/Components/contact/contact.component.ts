@@ -93,9 +93,9 @@ export class ContactComponent {
         console.error('Error al enviar el mensaje:', error.text);
         Swal.fire({
           title: 'Error',
-          text: 'Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.',
+          text: 'Ocurrió un error al enviar el mensaje. Si falla nuevamente escribeme a mis redes social.',
           icon: 'error',
-          confirmButtonText: 'Aceptar'
+          confirmButtonText: 'Intentarlo de Nuevo'
         });
       });
   }
