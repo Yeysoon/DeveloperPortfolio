@@ -1,6 +1,6 @@
 <div class="contact-container">
   <h2 id="greeting">Hola, envíame un mensaje</h2>
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" id="contactForm">
+  <form #contactForm="ngForm" id="contactForm">
     <div>
       <label for="name">Nombre:</label>
       <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="30" #name="ngModel">
@@ -17,11 +17,11 @@
     </div>
     <div>
       <label for="message">Mensaje:</label>
-      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="500" #message="ngModel"></textarea>
+      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="60" #message="ngModel"></textarea>
       <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
         El mensaje es obligatorio y no debe exceder 60 caracteres.
       </div>
     </div>
-    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+    <button type="button" (click)="checkFormValidity(contactForm)">Enviar</button>
   </form>
 </div>

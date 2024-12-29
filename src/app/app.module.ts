@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -13,6 +15,8 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { QuillModule } from 'ngx-quill';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
