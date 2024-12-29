@@ -17,9 +17,9 @@
     </div>
     <div>
       <label for="message"><strong>Mensaje:</strong></label>
-      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="500" #message="ngModel"></textarea>
+      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="1000" #message="ngModel"></textarea>
       <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
-        El mensaje es obligatorio y no debe exceder 500 caracteres.
+        El mensaje es obligatorio y no debe exceder 1000 caracteres.
       </div>
     </div>
     <button type="button" (click)="checkFormValidity(contactForm)">Enviar</button>
