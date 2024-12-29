@@ -47,6 +47,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  font-weight: bold; /* Poner la fuente en negrita */
 }
 
 .contact-container button:hover {
