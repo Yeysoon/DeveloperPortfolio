@@ -16,12 +16,18 @@ export class ContactComponent {
     message: ''
   };
 
+  secondTimeSending: boolean = false;
   constructor(private router: Router) {}
+
   updateGreeting() {
     const name = this.contact.name || '';
     const greetingElement = document.getElementById('greeting');
     if (greetingElement) {
-      greetingElement.textContent = `Hola ${name}, envíame un mensaje`;
+      if (this.secondTimeSending) {
+        greetingElement.textContent = `¿Otro Mensaje ${name}😍?, Venga, cuéntame más. 😏 `;
+      } else {
+        greetingElement.textContent = `Hola ${name}, envíame un mensaje`;
+      }
     }
   }
 
@@ -43,7 +49,7 @@ export class ContactComponent {
 
       Swal.fire({
         title: 'Error',
-        text: `Por favor, completa todo los campos te falto: ${missingFieldsText}.`,
+        text: `Por favor, completa todo los campos te falta el ${missingFieldsText}.`,
         icon: 'error',
         confirmButtonText: 'Volver'
       });
@@ -75,7 +81,8 @@ export class ContactComponent {
                 contactForm.resetForm({ name: name });
                 this.contact.email = '';
                 this.contact.message = '';
-                this.updateGreeting(); // Actualizar el saludo
+                this.secondTimeSending = true;
+                this.updateGreeting();
               } else if (result.isDenied) {
                 this.router.navigate(['/home']);  // Redirigir a la página principal
               }

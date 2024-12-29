@@ -3,9 +3,9 @@
   <form #contactForm="ngForm" id="contactForm">
     <div>
       <label for="name">Nombre:</label>
-      <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="30" #name="ngModel">
+      <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="50" #name="ngModel">
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
-        El nombre es obligatorio y no debe exceder 30 caracteres.
+        El nombre es obligatorio y no debe exceder 50 caracteres.
       </div>
     </div>
     <div>
@@ -17,9 +17,9 @@
     </div>
     <div>
       <label for="message">Mensaje:</label>
-      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="60" #message="ngModel"></textarea>
+      <textarea id="message" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="500" #message="ngModel"></textarea>
       <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
-        El mensaje es obligatorio y no debe exceder 60 caracteres.
+        El mensaje es obligatorio y no debe exceder 500 caracteres.
       </div>
     </div>
     <button type="button" (click)="checkFormValidity(contactForm)">Enviar</button>
