@@ -44,3 +44,11 @@ body {
 main {
   flex: 1;
 }
+
+body {
+  background: linear-gradient(to bottom, #0a0a36, #5f5c6e); /* Degradado de fondo de arriba hacia abajo */
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  margin: 0;
+  padding: 0;
+  color: white; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+}

@@ -2,7 +2,7 @@
   <h2 id="greeting">Hey, después de revisar mi perfil, ¿crees que encajo en tu equipo? Hazmelo Saber.</h2>
   <form #contactForm="ngForm" id="contactForm">
     <div>
-      <label for="name"><strong>Nombre:</strong></label>
+      <label for="name"><strong>Tu Nombre:</strong></label>
       <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="50" #name="ngModel">
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
         El nombre es obligatorio y no debe exceder 50 caracteres.
