@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(to bottom, #454555, #080425); /* Degradado de fondo */
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  margin: 0;
+  padding: 0;
+  color: white; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegurar que el body tenga al menos la altura de la ventana */
+}
+
+.content-wrapper {
+  flex: 1; /* Permitir que el contenido principal se expanda */
+}
+
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #1a1a1a;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -16,6 +30,7 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan adecuadamente */
 }
 
 .footer-left {
@@ -47,14 +62,9 @@ footer {
 }
 
 .footer-right {
-  position: absolute;
-  right: 40px; /* Ajusta la distancia del borde derecho */
-  top: 50%;    /* Centra verticalmente en el footer */
-  transform: translateY(-50%); /* Ajusta para centrar exactamente */
   display: flex;
   gap: 15px;   /* Espacio entre los iconos */
 }
-
 
 .social-icon {
   color: #fff;
@@ -66,7 +76,6 @@ footer {
 .social-icon:hover {
   color: #aaa;
 }
-
 
 .social-icon img {
   width: 24px;
@@ -84,5 +93,3 @@ footer {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
 }
-
-

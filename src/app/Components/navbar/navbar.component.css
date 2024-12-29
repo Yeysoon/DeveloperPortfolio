@@ -9,7 +9,16 @@ nav {
   background-color: #1a1a1a; /* Fondo oscuro para la isla */
   border-radius: 20px; /* Bordes redondeados para la isla */
   padding: 10px 20px;
+  position: fixed; /* Fijar la posición */
+  top: 10px; /* Dejar un margen superior para que no toque el borde superior */
+  left: 50%; /* Colocar en el centro horizontalmente */
+  transform: translateX(-50%); /* Ajustar la posición para centrarla */
+  width: auto; /* Ajustar automáticamente según el contenido */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center; /* Centrar el contenido dentro de la navbar */
 }
+
 
 nav ul {
   list-style: none;
