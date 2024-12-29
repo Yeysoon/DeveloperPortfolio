@@ -15,7 +15,6 @@ import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -36,7 +35,6 @@ import { QuillModule } from 'ngx-quill';
     RouterModule,
     FormsModule,
     HttpClientModule,
-    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
