@@ -9,7 +9,7 @@
 
 @keyframes blinkCaret {
   100% {
-    border-color: transparent;
+    border-color: white;
   }
 }
 
@@ -20,7 +20,7 @@
   margin: 0 auto;
   letter-spacing: .15em;
   animation:
-    typewriter 4s steps(40, end) 1s 1 normal both,
+    typewriter 1s steps(40, end) 1s 1 normal both,
     blinkCaret 0s step-end infinite;
 }
 
@@ -44,8 +44,8 @@
   transform: rotate(4.1deg);
   border: 0.1px solid rgba(64, 107, 163, 0.2); /* Borde negro muy delgado y transparente */
   animation:
-    typewriter 4s steps(40, end) 1s 1 normal both,
-    blinkCaret .75s step-end infinite;
+    typewriter 0.5s steps(40, end) 1s 1 normal both,
+    blinkCaret 0s step-end infinite;
 }
 
 .about-me-content {
