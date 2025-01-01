@@ -20,7 +20,11 @@ export class ContactComponent {
     { name: 'GitHub', url: 'https://github.com/Yeysoon', icon: '/icons/Github.png' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yeysoon/', icon: '/icons/Linkedin.png' },
     { name: 'YouTube', url: 'https://www.youtube.com/@yeysoon', icon: '/icons/Youtube.png' },
-    { name: 'WhatsApp', url: 'https://wa.me/+50246402539', icon: '/icons/Whatsapp.png' }
+    { name: 'WhatsApp', url: 'https://wa.me/+50246402539', icon: '/icons/Whatsapp.png' },
+    { name: 'Facebook', url: 'https://www.facebook.com/Yeysoonn/', icon: '/icons/Facebook.png' },
+    { name: 'Instagram', url: 'https://www.instagram.com/yeyson_hernandez_/', icon: '/icons/Instagram.png' },
+    { name: 'Twitch', url: 'https://www.twitch.tv/yeysoon', icon: '/icons/Twitch.png' },
+    { name: 'Discord', url: 'https://discord.com/channels/@me', icon: '/icons/Discord.png' }
   ];
 
   secondTimeSending: boolean = false;
