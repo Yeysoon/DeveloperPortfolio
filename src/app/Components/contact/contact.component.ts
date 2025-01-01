@@ -16,6 +16,13 @@ export class ContactComponent {
     message: ''
   };
 
+  socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/Yeysoon', icon: '/icons/Github.png' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yeysoon/', icon: '/icons/Linkedin.png' },
+    { name: 'YouTube', url: 'https://www.youtube.com/@yeysoon', icon: '/icons/Youtube.png' },
+    { name: 'WhatsApp', url: 'https://wa.me/+50246402539', icon: '/icons/Whatsapp.png' }
+  ];
+
   secondTimeSending: boolean = false;
   constructor(private router: Router) {}
 
@@ -24,8 +31,7 @@ export class ContactComponent {
     const greetingElement = document.getElementById('greeting');
     if (greetingElement) {
       if (this.secondTimeSending) {
-        greetingElement.textContent = `¿Otro Mensaje ${name}?
-        🥰 Venga, cuéntame más. 😏 `;
+        greetingElement.textContent = `¿Otro Mensaje ${name}? 🥰 Venga, cuéntame más. 😏`;
       } else {
         greetingElement.textContent = `Hey ${name}, después de revisar mi perfil, ¿crees que encajo en tu equipo? Hazmelo Saber.`;
       }
@@ -50,7 +56,7 @@ export class ContactComponent {
 
       Swal.fire({
         title: 'Error',
-        text: `Por favor, completa todo los campos te falta el ${missingFieldsText}.`,
+        text: `Por favor, completa todos los campos. Te falta ${missingFieldsText}.`,
         icon: 'error',
         confirmButtonText: 'Volver'
       });
@@ -93,7 +99,7 @@ export class ContactComponent {
         console.error('Error al enviar el mensaje:', error.text);
         Swal.fire({
           title: 'Error',
-          text: 'Ocurrió un error al enviar el mensaje. Si falla nuevamente escribeme a mis redes social.',
+          text: 'Ocurrió un error al enviar el mensaje. Si falla nuevamente, escríbeme a mis redes sociales.',
           icon: 'error',
           confirmButtonText: 'Intentarlo de Nuevo'
         });

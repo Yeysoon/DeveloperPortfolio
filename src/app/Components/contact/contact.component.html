@@ -28,26 +28,10 @@
   </div>
   <div class="left-section">
     <div class="social-section">
-      <h3>Redes Sociales</h3>
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/tu-perfil" target="_blank">
-            <img src="/icons/Github.png" alt="Facebook" class="social-icon">Facebook
-          </a>
-        </li>
-        <li>
-          <a href="https://www.tiktok.com/@tu-perfil" target="_blank">
-            <img src="/icons/Linkedin.png" alt="TikTok" class="social-icon">TikTok
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/c/tu-perfil" target="_blank">
-            <img src="/icons/Youtube.png" alt="YouTube" class="social-icon">YouTube
-          </a>
-        </li>
-        <li>
-          <a href="https://wa.me/tu-numero" target="_blank">
-            <img src="/icons/Whatsapp.png" alt="WhatsApp" class="social-icon">WhatsApp
+      <ul class="social-icons">
+        <li *ngFor="let social of socialLinks">
+          <a [href]="social.url" [attr.data-name]="social.name" target="_blank">
+            <img [src]="social.icon" class="social-icon" [alt]="social.name">
           </a>
         </li>
       </ul>
