@@ -1,27 +1,56 @@
-<div class="contact-container">
-  <h2 id="greeting">Hey, después de revisar mi perfil, ¿crees que encajo en tu equipo? Hazmelo Saber.</h2>
-  <form #contactForm="ngForm" id="contactForm">
-    <div>
-      <label for="name"><strong>Tu Nombre:</strong></label>
-      <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="50" #name="ngModel">
-      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
-        El nombre es obligatorio y no debe exceder 50 caracteres.
+<div class="main-container">
+  <div class="contact-container">
+    <h2 id="greeting">Hey, después de revisar mi perfil, ¿crees que encajo en tu equipo? Hazmelo Saber.</h2>
+    <form #contactForm="ngForm" id="contactForm">
+      <div>
+        <label for="name"><strong>Tu Nombre:</strong></label>
+        <input type="text" id="name" required [(ngModel)]="contact.name" name="name" (input)="updateGreeting()" maxlength="50" #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+          El nombre es obligatorio y no debe exceder 50 caracteres.
+        </div>
       </div>
-    </div>
-    <div>
-      <label for="email"><strong>Correo Electrónico:</strong></label>
-      <input type="email" id="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
-        Por favor, ingresa un correo electrónico válido.
+      <div>
+        <label for="email"><strong>Correo Electrónico:</strong></label>
+        <input type="email" id="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          Por favor, ingresa un correo electrónico válido.
+        </div>
       </div>
-    </div>
-    <div>
-      <label for="message"><strong>Mensaje:</strong></label>
-      <textarea id="message" rows="10" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="1000" #message="ngModel"></textarea>
-      <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
-        El mensaje es obligatorio y no debe exceder 1000 caracteres.
+      <div>
+        <label for="message"><strong>Mensaje:</strong></label>
+        <textarea id="message" rows="10" required [(ngModel)]="contact.message" name="message" (input)="adjustTextareaHeight()" maxlength="1000" #message="ngModel"></textarea>
+        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
+          El mensaje es obligatorio y no debe exceder 1000 caracteres.
+        </div>
       </div>
+      <button type="button" (click)="checkFormValidity(contactForm)">Enviar</button>
+    </form>
+  </div>
+  <div class="left-section">
+    <div class="social-section">
+      <h3>Redes Sociales</h3>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/tu-perfil" target="_blank">
+            <img src="/icons/Github.png" alt="Facebook" class="social-icon">Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@tu-perfil" target="_blank">
+            <img src="/icons/Linkedin.png" alt="TikTok" class="social-icon">TikTok
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/c/tu-perfil" target="_blank">
+            <img src="/icons/Youtube.png" alt="YouTube" class="social-icon">YouTube
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/tu-numero" target="_blank">
+            <img src="/icons/Whatsapp.png" alt="WhatsApp" class="social-icon">WhatsApp
+          </a>
+        </li>
+      </ul>
     </div>
-    <button type="button" (click)="checkFormValidity(contactForm)">Enviar</button>
-  </form>
+  </div>
 </div>
