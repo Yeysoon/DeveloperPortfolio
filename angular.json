@@ -66,17 +66,20 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "DeveloperPortfolio:build:production"
-            },
-            "development": {
-              "buildTarget": "DeveloperPortfolio:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
+        "builder": "@angular-devkit/build-angular:dev-server",
+        "options": {
+          "hmr": false
         },
+        "configurations": {
+          "production": {
+            "buildTarget": "DeveloperPortfolio:build:production"
+          },
+          "development": {
+            "buildTarget": "DeveloperPortfolio:build:development"
+          }
+        },
+        "defaultConfiguration": "development"
+      },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },
