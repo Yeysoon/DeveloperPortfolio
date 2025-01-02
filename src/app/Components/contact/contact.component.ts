@@ -24,7 +24,7 @@ export class ContactComponent {
     { name: 'Facebook', url: 'https://www.facebook.com/Yeysoonn/', icon: '/icons/Facebook.png' },
     { name: 'Instagram', url: 'https://www.instagram.com/yeyson_hernandez_/', icon: '/icons/Instagram.png' },
     { name: 'Twitch', url: 'https://www.twitch.tv/yeysoon', icon: '/icons/Twitch.png' },
-    { name: 'Discord', url: 'https://discord.com/channels/@me', icon: '/icons/Discord.png' }
+    { name: 'Discord', url: 'https://discord.gg/fnVQsD2x', icon: '/icons/Discord.png' }
   ];
 
   secondTimeSending: boolean = false;
