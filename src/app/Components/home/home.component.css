@@ -16,19 +16,19 @@
 
   @keyframes borderAnimation {
     0% {
-      border-color: rgba(162, 0, 255, 0.123);
+      border-color: rgba(255, 255, 255, 0.123);
     }
     25% {
       border-color: rgba(0, 17, 255, 0.123);
     }
     50% {
-      border-color: rgba(0, 13, 128, 0.123);
+      border-color: rgba(139, 147, 214, 0.123);
     }
     75% {
-      border-color: rgba(6, 6, 71, 0.123);
+      border-color: rgba(37, 37, 112, 0.123);
     }
     100% {
-      border-color: rgba(89, 0, 255, 0.123);
+      border-color: rgba(170, 166, 177, 0.123);
     }
   }
 
