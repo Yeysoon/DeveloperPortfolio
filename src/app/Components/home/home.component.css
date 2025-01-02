@@ -87,3 +87,56 @@
 .about-me-content p {
   line-height: 1.6;
 }
+
+.social-section {
+  position: fixed; /* Fija la sección de redes sociales en la ventana */
+  top: 50%; /* Coloca la sección a la mitad de la pantalla */
+  right: 2rem; /* Ajusta este valor según tus necesidades */
+  transform: translateY(-50%); /* Centra la sección verticalmente */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  border-radius: 8px;
+  transition: background-color 2s;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  animation: subtleGlow 3s infinite alternate;
+}
+
+
+.social-section:hover {
+  background-color: #04042944; /* Color del botón al pasar el puntero */
+  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  animation: subtleGlow 15s infinite alternate;
+}
+
+.social-section h3 {
+  color: white; /* Cambiar el color del texto a blanco */
+  margin-bottom: 1rem;
+}
+
+.social-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-section li {
+  margin-bottom: 1rem;
+}
+
+.social-section a {
+  color: #f5f5dc; /* Color de los enlaces a beige */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.social-section a:hover {
+  color: #e5e5c9; /* Color más oscuro para el efecto hover */
+}
