@@ -1,178 +1,241 @@
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 17%;
-    }
-  }
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 17%; }
+}
 
-  @keyframes blinkCaret {
-    100% {
-      border-color: white;
-    }
-  }
+@keyframes blinkCaret {
+  100% { border-color: white; }
+}
+
+@keyframes borderAnimation {
+  0% { border-color: rgba(255, 255, 255, 0.123); }
+  25% { border-color: rgba(0, 17, 255, 0.123); }
+  50% { border-color: rgba(139, 147, 214, 0.123); }
+  75% { border-color: rgba(37, 37, 112, 0.123); }
+  100% { border-color: rgba(170, 166, 177, 0.123); }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid orange; /* Efecto del cursor de escritura */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typewriter 1s steps(40, end) 1s 1 normal both, blinkCaret 0s step-end infinite;
+}
+
+.about-me-container {
+  display: flex;
+  align-items: flex-start; /* Ajusta para que los elementos estén alineados al inicio */
+  padding: 20px;
+  align-content: center;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-top: 200px; /* Ajusta este valor para mover el contenedor hacia abajo */
+}
+
+.profile-pic-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.profile-pic {
+  width: 65px; /* Ajusta el tamaño según sea necesario */
+  height: 65px; /* Ajusta el tamaño según sea necesario */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Para asegurar que la imagen se ajuste bien */
+  border: 0.1px solid rgba(64, 107, 163, 0.2); /* Borde negro muy delgado y transparente */
+}
+
+.vertical-line {
+  position: relative;
+  height: 0%;
+  width: 75px;
+  color: #f2ff35;
+  margin-left: -50px;
+}
+
+.home-content {
+  max-width: 600px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido verticalmente */
+  position: relative;
+}
+
+.home-content::before {
+  content: '';
+  position: absolute;
+  left: -15px; /* Ajusta según sea necesario */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #f1ee39; /* Color de la línea vertical */
+}
+
+.about-me-content h3 {
+  margin-bottom: 40px;
+  text-align: justify;
+  color: #f1ee39;
+}
+
+.about-me-content h1 {
+  margin-bottom: 1px;
+  text-align: justify;
+}
+
+.about-me-content p {
+  line-height: 1.6;
+}
+
+.social-section {
+  position: fixed; /* Fija la sección de redes sociales en la ventana */
+  top: 50%; /* Coloca la sección a la mitad de la pantalla */
+  right: 2rem; /* Ajusta este valor según tus necesidades */
+  transform: translateY(-50%); /* Centra la sección verticalmente */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  border-radius: 8px;
+  transition: background-color 2s;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  animation: subtleGlow 3s infinite alternate;
+}
+
+.social-section:hover {
+  background-color: #04042944; /* Color del botón al pasar el puntero */
+  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  animation: subtleGlow 15s infinite alternate;
+}
+
+.social-section h3 {
+  color: white; /* Cambiar el color del texto a blanco */
+  margin-bottom: 1rem;
+}
+
+.social-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-section li {
+  margin-bottom: 1rem;
+}
+
+.social-section a {
+  color: #f5f5dc; /* Color de los enlaces a beige */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.social-section a:hover {
+  color: #e5e5c9; /* Color más oscuro para el efecto hover */
+}
+
+.disponible-boton {
+  left: 100px;
+  top: 100%;
+  transform: translate(162px, -8px);
+  background-color: #2f415762; /* Mismo color que la navbar */
+  border: 2px solid rgb(219, 219, 219);
+  color: white;
+  padding: 3px 6px;
+  font-size: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-radius: 150px;
+  display: inline-block;
+  animation: borderAnimation 2s infinite; /* Aplicar la animación */
+}
+
+.licenses-container {
+  display: flex;
+  align-items: flex-start; /* Ajusta para que los elementos estén alineados al inicio */
+  padding: 20px;
+  align-content: center;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-top: 200px; /* Ajusta este valor para mover el contenedor hacia abajo */
+  margin-left: -400px;
+}
+
+.licenses-pic-container{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.licenses-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.licenses-pic {
+  width: 65px; /* Ajusta el tamaño según sea necesario */
+  height: 65px; /* Ajusta el tamaño según sea necesario */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Para asegurar que la imagen se ajuste bien */
+  border: 0.1px solid rgba(64, 107, 163, 0.2); /* Borde negro muy delgado y transparente */
+}
+
+.verticals-line{
+  position: relative;
+  height: 0%;
+  width: 75px;
+  color: #c7c7c7;
+  margin-left: -50px;
+}
+
+.licenses-content h3 {
+  margin-bottom: 40px;
+  text-align: justify;
+  color: #f1ee39;
+}
+
+.licenses-content h1 {
+  margin-bottom: 1px;
+  text-align: justify;
+}
+
+.licenses-content p {
+  line-height: 1.6;
+}
+
+.license-content {
+  max-width: 600px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido verticalmente */
+  position: relative;
+}
+
+.license-content::before {
+  content: '';
+  position: absolute;
+  left: -15px; /* Ajusta según sea necesario */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #7c7c7c; /* Color de la línea vertical */
+}
+
+.licence-title{
+  margin-top: auto;
+  position: relative;
+  text-align: center;
+}
 
 
-  @keyframes borderAnimation {
-    0% {
-      border-color: rgba(255, 255, 255, 0.123);
-    }
-    25% {
-      border-color: rgba(0, 17, 255, 0.123);
-    }
-    50% {
-      border-color: rgba(139, 147, 214, 0.123);
-    }
-    75% {
-      border-color: rgba(37, 37, 112, 0.123);
-    }
-    100% {
-      border-color: rgba(170, 166, 177, 0.123);
-    }
-  }
-
-  .typewriter {
-    overflow: hidden;
-    border-right: .15em solid orange; /* Efecto del cursor de escritura */
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typewriter 1s steps(40, end) 1s 1 normal both, blinkCaret 0s step-end infinite;
-  }
-
-  .about-me-container {
-    display: flex;
-    align-items: flex-start; /* Ajusta para que los elementos estén alineados al inicio */
-    padding: 20px;
-    align-content: center;
-    box-sizing: border-box;
-    justify-content: center;
-    margin-top: 200px; /* Ajusta este valor para mover el contenedor hacia abajo */
-  }
-
-  .profile-pic-container {
-    display: flex;
-    align-items: center;
-    margin-right: 30px; /* Ajusta la separación según sea necesario */
-  }
-
-  .profile-pic {
-    width: 65px; /* Ajusta el tamaño según sea necesario */
-    height: 65px; /* Ajusta el tamaño según sea necesario */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Para asegurar que la imagen se ajuste bien */
-    border: 0.1px solid rgba(64, 107, 163, 0.2); /* Borde negro muy delgado y transparente */
-  }
-
-  .vertical-line {
-    position: relative;
-    height: 0%; /* Ajusta la altura de la línea según el contenedor */
-    width: 75px;
-    color: #f2ff35;/* Color de la línea vertical */
-    margin-left: -50px; /* Separación prudente de la línea */
-  }
-
-  .home-content {
-    max-width: 600px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrar contenido verticalmente */
-    position: relative;
-  }
-
-  .home-content::before {
-    content: '';
-    position: absolute;
-    left: -15px; /* Ajusta según sea necesario */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #f1ee39; /* Color de la línea vertical */
-  }
-
-  .about-me-content h3 {
-    margin-bottom: 40px;
-    text-align: justify;
-    color: #f1ee39;
-  }
-
-  .about-me-content h1 {
-    margin-bottom: 1px;
-    text-align: justify;
-  }
-
-  .about-me-content p {
-    line-height: 1.6;
-  }
-
-  .social-section {
-    position: fixed; /* Fija la sección de redes sociales en la ventana */
-    top: 50%; /* Coloca la sección a la mitad de la pantalla */
-    right: 2rem; /* Ajusta este valor según tus necesidades */
-    transform: translateY(-50%); /* Centra la sección verticalmente */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
-    border-radius: 8px;
-    transition: background-color 2s;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
-    animation: subtleGlow 3s infinite alternate;
-  }
-
-
-  .social-section:hover {
-    background-color: #04042944; /* Color del botón al pasar el puntero */
-    border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
-    animation: subtleGlow 15s infinite alternate;
-  }
-
-  .social-section h3 {
-    color: white; /* Cambiar el color del texto a blanco */
-    margin-bottom: 1rem;
-  }
-
-  .social-section ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .social-section li {
-    margin-bottom: 1rem;
-  }
-
-  .social-section a {
-    color: #f5f5dc; /* Color de los enlaces a beige */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-
-  .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 0.5rem;
-  }
-
-  .social-section a:hover {
-    color: #e5e5c9; /* Color más oscuro para el efecto hover */
-  }
-
-  .disponible-boton {
-    left: 100px;
-    top: 100%;
-    transform: translate(162px, -8px);
-    background-color: #2f415762; /* Mismo color que la navbar */
-    border: 2px solid rgb(219, 219, 219);
-    color: white;
-    padding: 3px 6px;
-    font-size: 10px;
-    text-align: left;
-    font-weight: bold;
-    border-radius: 150px;
-    display: inline-block;
-    animation: borderAnimation 2s infinite; /* Aplicar la animación */
-  }
 
