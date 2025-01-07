@@ -228,13 +228,14 @@
   width: 29%; /* Ancho del botón */
   justify-content: center;
   text-decoration: none;
-  animation: borderAnimation 2s infinite;
+  animation: subtleGlow 15s infinite alternate;
 }
 
 .show-credential-button:hover {
   background-color: #04042944;
   border: 0.1px solid #1a1a1a5e;
-  animation: subtleGlow 15s infinite alternate;}
+  animation: subtleGlow 5s infinite alternate;
+}
 
 
 .separator{
