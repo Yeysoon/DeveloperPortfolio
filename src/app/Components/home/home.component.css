@@ -216,7 +216,7 @@
 .show-credential-button {
   background-color: #2f415762;
   border: 2px solid rgb(219, 219, 219);
-  color: rgba(242, 255, 167, 0.712);
+  color: rgba(255, 255, 255, 0.849);
   padding: 4px 8px;
   font-size: 13px;
   text-align: left;
@@ -230,6 +230,12 @@
   text-decoration: none;
   animation: borderAnimation 2s infinite;
 }
+
+.show-credential-button:hover {
+  background-color: #04042944;
+  border: 0.1px solid #1a1a1a5e;
+  animation: subtleGlow 15s infinite alternate;}
+
 
 .separator{
   margin-top: 50px;
