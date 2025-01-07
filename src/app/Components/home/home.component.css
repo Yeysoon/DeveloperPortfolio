@@ -214,7 +214,7 @@
 .show-credential-button {
   background-color: #2f415762;
   border: 2px solid rgb(219, 219, 219);
-  color: white;
+  color: rgba(242, 255, 167, 0.712);
   padding: 4px 8px;
   font-size: 13px;
   text-align: left;
@@ -225,6 +225,8 @@
   border-radius: 150px; /* Borde redondeado */
   width: 29%; /* Ancho del botón */
   justify-content: center;
+  text-decoration: none;
+  animation: borderAnimation 2s infinite;
 }
 
 .separator{
