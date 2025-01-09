@@ -1,3 +1,15 @@
+@keyframes subtleGlow {
+  0% {
+    box-shadow: 0 0 2px rgba(7, 11, 68, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 5px rgba(75, 72, 231, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 2px rgba(29, 18, 95, 0.2);
+  }
+}
+
 /* Estilos generales */
 @keyframes typewriter {
   from { width: 0; }
@@ -225,30 +237,69 @@
 }
 
 .show-credential-button {
-  background-color: #2f415762;
-  border: 2px solid rgb(219, 219, 219);
-  color: rgba(255, 255, 255, 0.849);
-  padding: 4px 8px;
-  font-size: 11px;
-  text-align: left;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center; /* Asegura que el texto y el icono estén alineados verticalmente */
-  cursor: pointer;
-  border-radius: 150px; /* Borde redondeado */
-  width: 29%; /* Ancho del botón */
-  justify-content: center;
   text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1); /* Azul brillante */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 13px; /* Botones redondeados */
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-sizing: border-box;
+  text-align: center; /* Centra el texto */
+  width: 35%; /* Ajusta el ancho automáticamente */
+  height: 0%; /* Ajusta la altura automáticamente */
+  background-color: #04042944;
+  border: 0.1px solid #1a1a1a5e;
   animation: subtleGlow 15s infinite alternate;
 }
 
 .show-credential-button:hover {
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
   background-color: #04042944;
   border: 0.1px solid #1a1a1a5e;
-  animation: subtleGlow 5s infinite alternate;
+  animation: subtleGlow 15s infinite alternate;
 }
-
 
 .separator{
   margin-top: 50px;
+}
+.categorias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  padding-left:70px;
+  max-width: 40%; /* Ajusta este valor según el espacio disponible */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  border: 1px solid transparent; /* Borde transparente */
+}
+
+.categoria-btn {
+  background-color: rgba(255, 255, 255, 0.1); /* Azul brillante */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 14px; /* Botones redondeados */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-sizing: border-box;
+  text-align: center; /* Centra el texto */
+  width: auto; /* Ajusta el ancho automáticamente */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: 5px; /* Espacio alrededor de los botones */
+  background-color: #04042944;
+  border: 0.1px solid #1a1a1a5e;
+  animation: subtleGlow 15s infinite alternate;
+}
+
+.categoria-btn:hover {
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  background-color: #04042944;
+  border: 0.1px solid #1a1a1a5e;
+  animation: subtleGlow 15s infinite alternate;
 }
