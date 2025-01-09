@@ -19,4 +19,5 @@ export class HomeComponent {
     { name: 'Twitch', url: 'https://www.twitch.tv/yeysoon', icon: '/icons/Twitch.png' },
     { name: 'Discord', url: 'https://discord.gg/fnVQsD2x', icon: '/icons/Discord.png' }
   ];
+
 }
