@@ -6,6 +6,7 @@ interface Experience {
   date: string;
   description: string;
   knowMore?: string;
+  logo?: string;
 }
 
 @Component({
@@ -18,6 +19,7 @@ export class ExperienceComponent {
   // Aquí está el cambio principal: experienceComponent -> experiences y el tipo correcto
   experiences: Experience[] = [
     {
+
       role: 'Content creator',
       company: 'Twitch',
       date: 'Present...',

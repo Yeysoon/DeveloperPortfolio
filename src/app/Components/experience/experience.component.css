@@ -5,6 +5,7 @@
   margin-left: auto;
   padding: 2rem 4rem;
   text-align: justify;
+  margin-top: 150px;
 }
 
 .section-header {
@@ -123,4 +124,13 @@
   .experience-item {
     flex-direction: column;
   }
+}
+
+
+.company-logo {
+  width: 30px; /* Tamaño del logo */
+  height: auto; /* Mantener proporción */
+  margin-bottom: 10px; /* Espaciado */
+  border-radius: 4px; /* Opcional: bordes redondeados */
+  margin-left: 620px;
 }
