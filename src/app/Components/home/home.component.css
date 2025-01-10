@@ -91,7 +91,7 @@
 .about-me-content h3 {
   margin-bottom: 40px;
   text-align: justify;
-  color: #f1ee39;
+  color: #FFD700;
 }
 
 .about-me-content h1 {
@@ -293,7 +293,7 @@
   height: auto; /* Ajusta la altura automáticamente */
   margin: 5px; /* Espacio alrededor de los botones */
   background-color: #04042944;
-  border: 0.1px solid #1a1a1a5e;
+  border: 0.1px solid #1baab45b;
   animation: subtleGlow 15s infinite alternate;
 }
 
