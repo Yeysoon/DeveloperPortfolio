@@ -1,16 +1,21 @@
-<div class="container">
-  <h1>Professional Experience</h1>
-  <div class="experience">
-    <h2>Content creator</h2>
-    <h3>Twitch</h3>
-    <p>Present...</p>
-    <p>I share about programming and web development on various platforms. Awarded as the best non-English content creator in 2022 and best community in 2023 by GitHub.</p>
-    <a href="#">Know more</a>
+<!-- professional-experience.component.html -->
+<div class="experience-container">
+  <div class="section-header">
+    <i class="briefcase-icon"></i>
+    <h2>Professional Experience</h2>
   </div>
-  <div class="experience">
-    <h2>Principal Frontend Engineer</h2>
-    <h3>Adevinta Spain</h3>
-    <p>September 2022</p>
-    <p>Responsible for the platform, components, and utilities for the creation and development of web applications. Achieved a 30% improvement in software delivery. Implementation of continuous integration and deployment measures with A/B testing across more than 15 teams.</p>
+
+  <div class="timeline">
+    <div class="experience-item" *ngFor="let exp of experiences">
+      <div class="timeline-dot"></div>
+
+      <div class="experience-content">
+        <h3>{{ exp.role }}</h3>
+        <h4>{{ exp.company }}</h4>
+        <p class="date">{{ exp.date }}</p>
+        <p class="description">{{ exp.description }}</p>
+        <a *ngIf="exp.knowMore" class="know-more">{{ exp.knowMore }}</a>
+      </div>
+    </div>
   </div>
 </div>

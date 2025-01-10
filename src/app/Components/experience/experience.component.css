@@ -1,26 +1,96 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a2e;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
+/* professional-experience.component.scss */
+.experience-container {
+  padding: 2rem;
+  background-color: #0a0a1f;
+  color: white;
 }
-.container {
-  padding: 20px;
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
-.experience {
-  margin-bottom: 20px;
+
+.briefcase-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8-2h4v2h-4V4z"/></svg>');
 }
-.experience h2 {
-  color: #ffd700;
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
-.experience h3 {
-  color: #ffd700;
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
-.experience p {
-  margin: 5px 0;
+
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;
+  width: 12px;
+  height: 12px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  transform: translateY(50%);
 }
-.experience a {
-  color: #ffd700;
-  text-decoration: none;
+
+.experience-content {
+  h3 {
+    color: #FFD700;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .date {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .know-more {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

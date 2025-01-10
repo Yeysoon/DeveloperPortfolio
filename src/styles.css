@@ -46,10 +46,10 @@ main {
 }
 
 body {
-  background: linear-gradient(to bottom, #040429, #5f5c6e); /* Degradado de fondo de arriba hacia abajo */
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  background:  #0a0a1f;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  color: white; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+  color: #e6f1ff;
 }
-
