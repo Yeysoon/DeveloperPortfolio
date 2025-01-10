@@ -21,10 +21,10 @@
 }
 
 .briefcase-icon {
-  width: 24px;
-  height: 24px;
-  background-color: white;
-  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8-2h4v2h-4V4z"/></svg>');
+  width: 40px;
+  height: 40px;
+  background-image: url('/icons/Experience.png'); /* Reemplaza 'tu-imagen-aqui.jpg' con la URL de tu imagen */
+  background-size: cover;
 }
 
 .timeline {
@@ -83,6 +83,11 @@
 }
 
 .experience-content .date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.experience-content .ubication {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
 }
