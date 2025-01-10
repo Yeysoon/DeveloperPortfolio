@@ -31,4 +31,25 @@ export class ExperienceComponent {
       description: 'Responsible for the platform, components, and utilities for the creation and development of web applications. Achieved a 30% improvement in software delivery. Implementation of continuous integration and deployment measures with A/B testing across more than 15 teams.'
     }
   ];
+
+
+  experiences2: Experience[] = [
+    {
+      role: 'Content creator',
+      company: 'Twitch',
+      date: 'Present...',
+      description: 'I share about programming and web development on various platforms. Awarded as the best non-English content creator in 2022 and best community in 2023 by GitHub.',
+      knowMore: 'Know more >'
+    }
+  ];
+
+  experiences3: Experience[] = [
+    {
+      role: 'Content creator',
+      company: 'Twitch',
+      date: 'Present...',
+      description: 'I share about programming and web development on various platforms. Awarded as the best non-English content creator in 2022 and best community in 2023 by GitHub.',
+      knowMore: 'Know more >'
+    }
+  ];
 }

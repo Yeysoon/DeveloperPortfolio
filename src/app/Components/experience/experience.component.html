@@ -19,3 +19,42 @@
     </div>
   </div>
 </div>
+
+<div class="experience-container">
+  <div class="section-header">
+  </div>
+
+  <div class="timeline">
+    <div class="experience-item" *ngFor="let exp of experiences2">
+      <div class="timeline-dot"></div>
+
+      <div class="experience-content">
+        <h3>{{ exp.role }}</h3>
+        <h4>{{ exp.company }}</h4>
+        <p class="date">{{ exp.date }}</p>
+        <p class="description">{{ exp.description }}</p>
+        <a *ngIf="exp.knowMore" class="know-more">{{ exp.knowMore }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="experience-container">
+  <div class="section-header">
+  </div>
+
+  <div class="timeline">
+    <div class="experience-item" *ngFor="let exp of experiences3">
+      <div class="timeline-dot"></div>
+
+      <div class="experience-content">
+        <h3>{{ exp.role }}</h3>
+        <h4>{{ exp.company }}</h4>
+        <p class="date">{{ exp.date }}</p>
+        <p class="description">{{ exp.description }}</p>
+        <a *ngIf="exp.knowMore" class="know-more">{{ exp.knowMore }}</a>
+      </div>
+    </div>
+  </div>
+</div>

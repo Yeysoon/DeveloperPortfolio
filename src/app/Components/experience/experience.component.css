@@ -1,7 +1,10 @@
-/* professional-experience.component.scss */
 .experience-container {
   padding: 2rem;
   color: white;
+  width: 70%;
+  margin-left: auto;
+  padding: 2rem 4rem;
+  text-align: justify;
 }
 
 .section-header {
@@ -9,11 +12,11 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .briefcase-icon {
@@ -26,25 +29,29 @@
 .timeline {
   position: relative;
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .experience-item {
   position: relative;
+  display: flex;
+  gap: 2rem;
   margin-bottom: 3rem;
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+.experience-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-dot {
@@ -58,38 +65,62 @@
 }
 
 .experience-content {
-  h3 {
-    color: #FFD700;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-content h3 {
+  color: #FFD700;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.experience-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-content .date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.experience-content .description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 60%;
+}
+
+.experience-content .know-more {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.experience-content .know-more:hover {
+  text-decoration: underline;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 900px) {
+  .experience-container {
+    width: 55%;
   }
 
-  h4 {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
+  .experience-content .description {
+    max-width: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    width: 10%;
+    padding: 2rem;
   }
 
-  .date {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .description {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .know-more {
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 0.9rem;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  .experience-item {
+    flex-direction: column;
   }
 }
