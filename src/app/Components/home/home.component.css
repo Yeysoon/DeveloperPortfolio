@@ -258,7 +258,7 @@
 .show-credential-button:hover {
   transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
   background-color: #04042944;
-  border: 0.1px solid #1a1a1a5e;
+  border: 0.1px solid #ffffff85;
   animation: subtleGlow 15s infinite alternate;
 }
 
