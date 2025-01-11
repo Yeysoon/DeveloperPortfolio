@@ -22,14 +22,14 @@ export class ExperienceComponent {
       role: 'STA Assistant - HR PROJECTS',
       company: 'MPRH · Jornada Completa',
       date: 'Ene. 2025 - Presente | Guatemala',
-      description: 'I share about programming and web development on various platforms. Awarded as the best non-English content creator in 2022 and best community in 2023 by GitHub.',
+      description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documenta aplicaciones y sistemas, brinda soporte tecnico e identifica oportunidades de mejora los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
       knowMore: 'Know more >'
     },
     {
       role: 'HR Metrics Assistant IT RRHH',
       company: 'MPRH · Jornada Completa',
       date: 'Jul. 2024 - Dic. 2024 · 6 meses | Guatemala',
-      description: 'Responsible for the platform, components, and utilities for the creation and development of web applications. Achieved a 30% improvement in software delivery. Implementation of continuous integration and deployment measures with A/B testing across more than 15 teams.',
+      description: 'Soporte en la implementación de aplicaciones, sistemas y reportería interna a Talento Humano, proporcionando asistencia técnica a todo el personal del departamento, contribuyendo a la automatización y eficiencia de los procesos, administración de bases de datos, y mejora continua de los sistemas de información.',
       knowMore: 'Know more >'
     },
   ];
