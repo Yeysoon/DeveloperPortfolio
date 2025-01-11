@@ -32,7 +32,9 @@
       <div class="timeline-dot"></div>
 
       <div class="experience-content">
-        <h3>{{ exp.role }}</h3>
+        <h3>{{ exp.role }}
+          <img *ngIf="exp.logo" [src]="exp.logo" alt="Company Logo" class="company-logo" />
+        </h3>
         <h4>{{ exp.company }}</h4>
         <p class="date">{{ exp.date }}</p>
         <p class="description">{{ exp.description }}</p>
@@ -52,7 +54,9 @@
       <div class="timeline-dot"></div>
 
       <div class="experience-content">
-        <h3>{{ exp.role }}</h3>
+        <h3>{{ exp.role }}
+          <img *ngIf="exp.logo" [src]="exp.logo" alt="Company Logo" class="company-logo" />
+        </h3>
         <h4>{{ exp.company }}</h4>
         <p class="date">{{ exp.date }}</p>
         <p class="description">{{ exp.description }}</p>

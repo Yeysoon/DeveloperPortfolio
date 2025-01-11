@@ -132,10 +132,10 @@
 }
 
 .company-logo {
-  width: 50px; /* Tamaño del logo */
+  width: 110px; /* Tamaño del logo */
   height: auto; /* Mantener proporción */
   float: right; /* Hace que el texto fluya alrededor de la imagen */
-  margin-bottom: -20px; /* Espaciado inferior */
-  margin-right: 500px;
+  margin-bottom: -60px; /* Espaciado inferior */
+  margin-right: 445px;
 }
 
