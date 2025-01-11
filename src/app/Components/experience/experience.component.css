@@ -131,11 +131,11 @@
   }
 }
 
-
 .company-logo {
-  width: 30px; /* Tamaño del logo */
+  width: 50px; /* Tamaño del logo */
   height: auto; /* Mantener proporción */
-  margin-bottom: 10px; /* Espaciado */
-  border-radius: 4px; /* Opcional: bordes redondeados */
-  margin-left: 620px;
+  float: right; /* Hace que el texto fluya alrededor de la imagen */
+  margin-bottom: -20px; /* Espaciado inferior */
+  margin-right: 500px;
 }
+

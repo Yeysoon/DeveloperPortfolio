@@ -6,6 +6,7 @@ interface Experience {
   date: string;
   description: string;
   knowMore?: string;
+  logo?: string;
 }
 
 @Component({
@@ -23,7 +24,8 @@ export class ExperienceComponent {
       company: 'MPRH · Jornada Completa',
       date: 'Ene. 2025 - Presente | Guatemala',
       description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documenta aplicaciones y sistemas, brinda soporte tecnico e identifica oportunidades de mejora los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
-      knowMore: 'Know more >'
+      knowMore: 'Know more >',
+      logo: '/logos/MprhWhite.png' // Ruta del logotipo
     },
     {
       role: 'HR Metrics Assistant IT RRHH',
