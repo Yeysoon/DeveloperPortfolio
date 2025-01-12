@@ -1,0 +1,116 @@
+.projects-section {
+  background-color: #020817;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+}
+
+.projects-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.code-symbol {
+  color: #9ca3af;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #1a1f2e;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-image-container {
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.technologies-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.technology-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.technology-badge.nextjs {
+  background-color: black;
+}
+
+.project-description,
+.project-stats {
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1d2433;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #2d3444;
+}
+
+.button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
