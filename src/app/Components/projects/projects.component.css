@@ -1,5 +1,4 @@
 .projects-section {
-  background-color: #020817;
   min-height: 100vh;
   padding: 2rem;
   color: white;
@@ -44,14 +43,48 @@
 
 .project-image-container {
   position: relative;
+  overflow: hidden;
+  font-size: 100px;
+  border-radius: 10px;
+  background-color: #1a1a2e; /* Fondo para evitar bordes vacíos */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .project-image {
-  width: 100%;
-  border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  border-radius: 10px; /* Opcional, para redondear esquinas */
 }
+
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 .project-info {
   display: flex;

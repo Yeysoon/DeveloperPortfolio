@@ -7,16 +7,20 @@
     @for (project of projects; track project.title) {
       <div class="project-card">
         <div class="project-grid">
-          <!-- Project Image -->
           <div class="project-image-container">
-            <img [src]="project.image" [alt]="project.title" class="project-image">
+            <div class="slider">
+              <img [src]="project.image" [alt]="project.title" class="project-image">
+              <img [src]="project.image2" [alt]="project.title" class="project-image">
+              <img [src]="project.image3" [alt]="project.title" class="project-image">
+            </div>
+            <!-- Botones de navegación -->
+            <button class="nav-button prev" (click)="prevSlide(project)">&#10094;</button>
+            <button class="nav-button next" (click)="nextSlide(project)">&#10095;</button>
           </div>
-
-          <!-- Project Info -->
           <div class="project-info">
-            <h3 class="project-title">{{ project.title }}</h3>
 
-            <!-- Technologies -->
+
+            <h3 class="project-title">{{ project.title }}</h3>
             <div class="technologies-container">
               @for (tech of project.technologies; track tech) {
                 <span class="technology-badge" [class.nextjs]="tech === 'Next.js'">
@@ -24,11 +28,8 @@
                 </span>
               }
             </div>
-
             <p class="project-description">{{ project.description }}</p>
             <p class="project-stats">{{ project.stats }}</p>
-
-            <!-- Buttons -->
             <div class="buttons-container">
               @if (project.links.code) {
                 <a [href]="project.links.code" class="button">
@@ -39,7 +40,6 @@
                   Code
                 </a>
               }
-
               <a [href]="project.links.preview" class="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
