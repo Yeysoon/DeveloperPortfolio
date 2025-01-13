@@ -1,74 +1,63 @@
-/* Selecciona el contenedor de la sección de proyectos */
+/* Contenedor principal */
 .projects-section {
-  width: 140%; /* Ajusta el ancho según tus necesidades */
-  margin-left: auto;
-  padding: 10px; /* Ajusta el padding según tus necesidades */
-}
-
-
-
-.projects-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  width: 100%;
+  min-height: 100vh; /* Asegura que tome toda la altura de la ventana */
+  padding: 10px; /* Ajusta el padding según necesites */
+  color: white;
 }
 
-.code-symbol {
-  color: #9ca3af;
-}
-
+/* Contenedor de los proyectos */
 .projects-container {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
   gap: 2rem;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  justify-content: center; /* Centra verticalmente */
 }
 
-
-/* Ajusta el tamaño de las tarjetas de los proyectos */
+/* Tarjetas de proyectos */
 .project-card {
-  width: 45%; /* Ajusta el ancho de las tarjetas */
-  margin: 10px; /* Ajusta el margen entre las tarjetas */
+  width: 100%;
+  max-width: 600px; /* Establece un ancho máximo */
+  margin: 10px auto; /* Centra las tarjetas horizontalmente */
   padding: 15px; /* Ajusta el padding de las tarjetas */
+  background-color: #1a1f2e;
+  border-radius: 0.5rem;
 }
 
 .project-grid {
   display: grid;
   gap: 1.5rem;
   padding: 1.5rem;
+  justify-content: center; /* Asegura que el contenido del grid se centre */
 }
 
-@media (min-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Contenedor de imágenes */
 .project-image-container {
   position: relative;
   overflow: hidden;
-  font-size: 100px;
+  width: 100%;
+  max-height: 300px; /* Ajusta esta altura según necesites */
   border-radius: 10px;
   background-color: #1a1a2e; /* Fondo para evitar bordes vacíos */
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
+/* Imágenes del carrusel */
 .project-image {
   width: 100%;
   height: auto;
   max-width: 100%;
   max-height: 300px; /* Ajusta la altura máxima según necesites */
   object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  border-radius: 10px;
 }
 
-
-
+/* Botones de navegación */
 .nav-button {
   position: absolute;
   top: 50%;
@@ -95,11 +84,12 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
+/* Información del proyecto */
 .project-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center; /* Centra el contenido de la información del proyecto */
 }
 
 .project-title {
@@ -111,6 +101,7 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  justify-content: center; /* Centra las tecnologías */
 }
 
 .technology-badge {
@@ -121,20 +112,18 @@
   color: white;
 }
 
-.technology-badge.nextjs {
-  background-color: black;
-}
-
 .project-description,
 .project-stats {
   color: #9ca3af;
   line-height: 1.5;
+  text-align: center; /* Centra el texto */
 }
 
 .buttons-container {
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
+  justify-content: center; /* Centra los botones */
 }
 
 .button {
