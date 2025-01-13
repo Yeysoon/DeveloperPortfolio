@@ -1,8 +1,11 @@
+/* Selecciona el contenedor de la sección de proyectos */
 .projects-section {
-  min-height: 100vh;
-  padding: 2rem;
-  color: white;
+  width: 140%; /* Ajusta el ancho según tus necesidades */
+  margin-left: auto;
+  padding: 10px; /* Ajusta el padding según tus necesidades */
 }
+
+
 
 .projects-title {
   font-size: 1.5rem;
@@ -23,10 +26,12 @@
   gap: 2rem;
 }
 
+
+/* Ajusta el tamaño de las tarjetas de los proyectos */
 .project-card {
-  background-color: #1a1f2e;
-  border-radius: 0.5rem;
-  overflow: hidden;
+  width: 45%; /* Ajusta el ancho de las tarjetas */
+  margin: 10px; /* Ajusta el margen entre las tarjetas */
+  padding: 15px; /* Ajusta el padding de las tarjetas */
 }
 
 .project-grid {
@@ -55,8 +60,13 @@
 }
 
 .project-image {
-  border-radius: 10px; /* Opcional, para redondear esquinas */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px; /* Ajusta la altura máxima según necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
 }
+
 
 
 .nav-button {
