@@ -1,11 +1,10 @@
-/* Selecciona el contenedor de la sección de proyectos */
+/* Contenedor principal de proyectos */
 .projects-section {
-  width: 140%; /* Ajusta el ancho según tus necesidades */
-  margin-left: auto;
-  padding: 10px; /* Ajusta el padding según tus necesidades */
+  width: 100%; /* Cambiado de 140% a 100% */
+  max-width: 1200px; /* Añadido un ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 2rem;
 }
-
-
 
 .projects-title {
   font-size: 1.5rem;
@@ -24,21 +23,15 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: center
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
-
-/* Ajusta el tamaño de las tarjetas de los proyectos */
-.project-card {
-  width: 45%; /* Ajusta el ancho de las tarjetas */
-  margin: 10px; /* Ajusta el margen entre las tarjetas */
-  padding: 15px; /* Ajusta el padding de las tarjetas */
-}
-
+/* Grid de proyectos */
 .project-grid {
   display: grid;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 2rem;
+  width: 100%;
+  grid-template-columns: 1fr; /* Una columna por defecto */
 }
 
 @media (min-width: 768px) {
@@ -47,12 +40,19 @@
   }
 }
 
+/* Tarjeta de proyecto */
+.project-card {
+  width: 100%; /* Ocupa todo el ancho disponible en su columna */
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .project-image-container {
   position: relative;
   overflow: hidden;
-  font-size: 100px;
   border-radius: 10px;
-    background-color: #1a1a2e; /* Fondo para evitar bordes vacíos */
+  background-color:   transparent;
 }
 
 .slider {
@@ -62,13 +62,9 @@
 
 .project-image {
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 300px; /* Ajusta la altura máxima según necesites */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  height: 300px; /* Altura fija */
+  object-fit: cover;
 }
-
-
 
 .nav-button {
   position: absolute;
@@ -92,26 +88,21 @@
   right: 10px;
 }
 
-.nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-
 .project-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding: 1.5rem;
 }
 
 .project-title {
   font-size: 1.25rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .technologies-container {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .technology-badge {
@@ -122,20 +113,10 @@
   color: white;
 }
 
-.technology-badge.nextjs {
-  background-color: black;
-}
-
-.project-description,
-.project-stats {
-  color: #9ca3af;
-  line-height: 1.5;
-}
-
 .buttons-container {
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .button {
@@ -148,13 +129,4 @@
   text-decoration: none;
   border-radius: 0.5rem;
   transition: background-color 0.2s;
-}
-
-.button:hover {
-  background-color: #2d3444;
-}
-
-.button svg {
-  width: 1.25rem;
-  height: 1.25rem;
 }
