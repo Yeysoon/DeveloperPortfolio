@@ -11,7 +11,7 @@ export interface Project {
   technologies: string[];
   links: {
     code?: string;
-    preview: string;
+    code2?: string;
   };
 }
 
@@ -33,7 +33,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       technologies: ['Next.js', 'Tailwind CSS'],
       links: {
         code: 'https://github.com/username/svgl',
-        preview: 'https://svgl.example.com'
+        code2: 'https://github.com/username/svgl',
       }
     },
     {
@@ -45,7 +45,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       image3: '/images/Abarroteria3.png',
       technologies: ['Next.js', 'Tailwind CSS'],
       links: {
-        preview: 'https://adventjs.example.com'
+        code: 'https://github.com/username/svgl',
       }
     }
   ];
