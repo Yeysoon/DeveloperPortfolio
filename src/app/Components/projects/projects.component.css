@@ -1,4 +1,11 @@
-/* projects.component.css */
+@keyframes borderAnimation {
+  0% { border-color: rgba(255, 255, 255, 0.123); }
+  25% { border-color: rgba(0, 17, 255, 0.123); }
+  50% { border-color: rgba(139, 147, 214, 0.123); }
+  75% { border-color: rgba(37, 37, 112, 0.123); }
+  100% { border-color: rgba(170, 166, 177, 0.123); }
+}
+
 .projects-section {
   width: 100%;
   max-width: 1200px;
@@ -91,20 +98,24 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+
 }
 
 .technology-badge {
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  background-color: #0ea5e9;
+  background-color:#202041c7;
   color: white;
+  border: 1px solid rgb(219, 219, 219);
+  animation: borderAnimation 2s infinite;
 }
 
 .buttons-container {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  animation: borderAnimation 15s infinite;
 }
 
 .button {
@@ -112,15 +123,24 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #1d2433;
+  background-color: #29344d;
   color: white;
   text-decoration: none;
   border-radius: 0.5rem;
   transition: background-color 0.2s;
+  animation: borderAnimation 2s infinite;
 }
 
 .project-description,
 .project-stats {
   color: #9ca3af;
   margin-bottom: 1rem;
+}
+
+
+.technology-badge:hover {
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  background-color: #04042944;
+  border: 0.1px solid #ffffff5e;
+  animation: subtleGlow 15s infinite alternate;
 }
