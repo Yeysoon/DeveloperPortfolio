@@ -24,28 +24,28 @@ export interface Project {
 export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [
     {
-      title: 'SVGL - A beautiful library with SVG logos',
-      description: 'Library of SVG logos from the most popular brands.',
-      stats: '+10k visits per month. +2K SVGs downloaded. Created from scratch with Next.js, React, and Tailwind CSS.',
+      title: 'Hospital Aplication API RESTful (Project University)',
+      description: 'Responsiva para la gestion administrativa de un hospital.',
+      stats: 'Aplicación web construida con tecnologias Java, Spring Boot, Bootstrap, SweetAlert, Angular CLI, CSS, HTML, TypeScript Postgre SQL.',
       image: '/images/HospitalApp.png',
       image2: '/images/HospitalApp2.png',
       image3: '/images/HospitalApp3.png',
-      technologies: ['Next.js', 'Tailwind CSS'],
+      technologies: ['Angular CLI', 'Postgre SQL', 'Spring Boot', 'Java SE'],
       links: {
-        code: 'https://github.com/username/svgl',
-        code2: 'https://github.com/username/svgl',
+        code: 'https://github.com/Yeysoon/Proyecto-Java-Angular-Hospital',
+        code2: 'https://github.com/Yeysoon/Proyecto-Java-Spring-Hospital',
       }
     },
     {
-      title: 'AdventJS - Programming challenges with JavaScript and TypeScript',
-      description: 'Free platform with programming challenges.',
-      stats: 'Over 1 million visits in a month. +50K challenges completed. Created from scratch with Next.js, React, and Tailwind CSS.',
+      title: 'MaxiAbarrotes with JSP Java SE (Project University)',
+      description: 'Aplicación Web de Abarrotería con Integración Java, Maven y MySQL',
+      stats: 'Aplicacion web onstruida con tecnologias Java SE, Maven, Bootstrap, Tomcat, CSS, HTML, JSP(Java Server Pages), MySQL',
       image: '/images/Abarroteria.png',
       image2: '/images/Abarroteria2.png',
       image3: '/images/Abarroteria3.png',
-      technologies: ['Next.js', 'Tailwind CSS'],
+      technologies: ['Java SE', 'Bootstrap', 'Maven', 'MySQL', 'Tomcat'],
       links: {
-        code: 'https://github.com/username/svgl',
+        code2: 'https://github.com/Yeysoon/Proyecto-Abarroteria-Java-Maven-MYSQL',
       }
     }
   ];
