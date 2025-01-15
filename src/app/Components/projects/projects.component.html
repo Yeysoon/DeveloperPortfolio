@@ -1,3 +1,4 @@
+<!-- projects.component.html -->
 <section class="projects-section">
   <h1 class="projects-title">
     <code class="code-symbol">&lt;/&gt;</code> Projects
@@ -9,13 +10,10 @@
         <div class="project-grid">
           <div class="project-image-container" [attr.data-title]="project.title">
             <div class="slider">
-              <img [src]="project.image" [alt]="project.title" class="project-image">
-              <img [src]="project.image2" [alt]="project.title" class="project-image">
-              <img [src]="project.image3" [alt]="project.title" class="project-image">
+              <img [src]="project.image" [alt]="project.title" class="project-image" [class.active]="currentSlides[project.title] === 0">
+              <img [src]="project.image2" [alt]="project.title" class="project-image" [class.active]="currentSlides[project.title] === 1">
+              <img [src]="project.image3" [alt]="project.title" class="project-image" [class.active]="currentSlides[project.title] === 2">
             </div>
-            <!-- Botones de navegación -->
-            <button class="nav-button prev" (click)="prevSlide(project)">&#10094;</button>
-            <button class="nav-button next" (click)="nextSlide(project)">&#10095;</button>
           </div>
           <div class="project-info">
             <h3 class="project-title">{{ project.title }}</h3>

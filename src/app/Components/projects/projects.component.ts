@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+// projects.component.ts
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 export interface Project {
   title: string;
@@ -14,16 +15,13 @@ export interface Project {
   };
 }
 
-
 @Component({
   selector: 'app-projects',
   standalone: false,
-
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
-
+export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [
     {
       title: 'SVGL - A beautiful library with SVG logos',
@@ -53,28 +51,27 @@ export class ProjectsComponent {
   ];
 
   currentSlides: { [key: string]: number } = {};
+  private intervalIds: { [key: string]: any } = {};
 
   constructor() {
     this.projects.forEach(project => {
-      this.currentSlides[project.title] = 0; // Inicializa cada carrusel en la primera imagen
+      this.currentSlides[project.title] = 0;
     });
   }
 
-  nextSlide(project: Project): void {
-    const images = [project.image, project.image2, project.image3];
-    this.currentSlides[project.title] = (this.currentSlides[project.title] + 1) % images.length;
-    this.updateSlider(project);
+  ngOnInit() {
+    this.projects.forEach(project => {
+      this.startAutoSlide(project);
+    });
   }
 
-  prevSlide(project: Project): void {
-    const images = [project.image, project.image2, project.image3];
-    this.currentSlides[project.title] = (this.currentSlides[project.title] - 1 + images.length) % images.length;
-    this.updateSlider(project);
+  ngOnDestroy() {
+    Object.values(this.intervalIds).forEach(id => clearInterval(id));
   }
 
-  updateSlider(project: Project): void {
-    const slider = document.querySelector(`.slider`) as HTMLElement;
-    slider.style.transform = `translateX(-${this.currentSlides[project.title] * 100}%)`;
+  private startAutoSlide(project: Project) {
+    this.intervalIds[project.title] = setInterval(() => {
+      this.currentSlides[project.title] = (this.currentSlides[project.title] + 1) % 3;
+    }, 3000);
   }
-
 }
