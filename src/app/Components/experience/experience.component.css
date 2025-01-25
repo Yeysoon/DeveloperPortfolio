@@ -21,11 +21,6 @@ html, body {
   margin-bottom: 32px; /* 2rem en px */
 }
 
-.section-header h2 {
-  font-size: 24px; /* 1.5rem en px */
-  font-weight: 600;
-}
-
 .briefcase-icon {
   width: 40px;
   height: 40px;
@@ -93,10 +88,7 @@ html, body {
   font-size: 14.4px; /* 0.9rem en px */
 }
 
-.experience-content .ubication {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14.4px; /* 0.9rem en px */
-}
+
 
 .experience-content .description {
   color: rgba(255, 255, 255, 0.8);
@@ -111,9 +103,6 @@ html, body {
   cursor: pointer;
 }
 
-.experience-content .know-more:hover {
-  text-decoration: underline;
-}
 
 .company-logo {
   width: 110px; /* Tamaño del logo */
@@ -122,19 +111,10 @@ html, body {
   margin-bottom: -60px; /* Espaciado inferior */
 }
 
+.experience-content .description {
+  max-width: 100%; /* Ajuste para mejor lectura */
+}
 
-
-  .experience-content .description {
-    max-width: 100%; /* Ajuste para mejor lectura */
-  }
-
-@media (max-width: 768px) {
-  .experience-container {
-    width: 80px; /* Ancho fijo para pantallas pequeñas */
-    padding: 32px; /* 2rem en px */
-  }
-
-  .experience-item {
-    flex-direction: column;
-  }
+.experience-item {
+  flex-direction: column;
 }
