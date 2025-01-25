@@ -1,9 +1,15 @@
+/* Evitar que el usuario haga zoom */
+html, body {
+  zoom: 1; /* Bloquear el zoom */
+  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+
 .experience-container {
-  padding: 2rem;
+  padding: 32px; /* 2rem en px */
   color: white;
-  width: 70%;
+  width: 1120px; /* 70% de 1600px (ancho común) */
   margin-left: auto;
-  padding: 2rem 4rem;
+  margin-right: auto;
   text-align: justify;
   margin-top: 150px;
 }
@@ -11,25 +17,25 @@
 .section-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 16px; /* 1rem en px */
+  margin-bottom: 32px; /* 2rem en px */
 }
 
 .section-header h2 {
-  font-size: 1.5rem;
+  font-size: 24px; /* 1.5rem en px */
   font-weight: 600;
 }
 
 .briefcase-icon {
   width: 40px;
   height: 40px;
-  background-image: url('/icons/Experience.png'); /* Reemplaza 'tu-imagen-aqui.jpg' con la URL de tu imagen */
+  background-image: url('/icons/Experience.png'); /* Reemplaza con tu imagen */
   background-size: cover;
 }
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 32px; /* 2rem en px */
   display: flex;
   flex-direction: column;
 }
@@ -47,8 +53,8 @@
 .experience-item {
   position: relative;
   display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 32px; /* 2rem en px */
+  margin-bottom: 48px; /* 3rem en px */
 }
 
 .experience-item:last-child {
@@ -57,7 +63,7 @@
 
 .timeline-dot {
   position: absolute;
-  left: -2.4rem;
+  left: -38.4px; /* 2.4rem en px */
   width: 12px;
   height: 12px;
   background-color: #FFD700;
@@ -68,28 +74,28 @@
 .experience-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px; /* 0.5rem en px */
 }
 
 .experience-content h3 {
   color: #FFD700;
-  font-size: 1.25rem;
+  font-size: 20px; /* 1.25rem en px */
   font-weight: 600;
 }
 
 .experience-content h4 {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+  font-size: 16px; /* 1rem en px */
+  margin-bottom: 4px; /* 0.25rem en px */
 }
 
 .experience-content .date {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  font-size: 14.4px; /* 0.9rem en px */
 }
 
 .experience-content .ubication {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  font-size: 14.4px; /* 0.9rem en px */
 }
 
 .experience-content .description {
@@ -101,7 +107,7 @@
 .experience-content .know-more {
   color: #FFD700;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 14.4px; /* 0.9rem en px */
   cursor: pointer;
 }
 
@@ -109,33 +115,32 @@
   text-decoration: underline;
 }
 
+.company-logo {
+  width: 110px; /* Tamaño del logo */
+  height: auto; /* Mantener proporción */
+  float: right; /* Hace que el texto fluya alrededor de la imagen */
+  margin-bottom: -60px; /* Espaciado inferior */
+  margin-right: 410px;
+}
+
 /* Media queries para responsividad */
 @media (max-width: 900px) {
   .experience-container {
-    width: 55%;
+    width: 880px; /* 55% de 1600px */
   }
 
   .experience-content .description {
-    max-width: 10%;
+    max-width: 100%; /* Ajuste para mejor lectura */
   }
 }
 
 @media (max-width: 768px) {
   .experience-container {
-    width: 10%;
-    padding: 2rem;
+    width: 768px; /* Ancho fijo para pantallas pequeñas */
+    padding: 32px; /* 2rem en px */
   }
 
   .experience-item {
     flex-direction: column;
   }
 }
-
-.company-logo {
-  width: 110px; /* Tamaño del logo */
-  height: auto; /* Mantener proporción */
-  float: right; /* Hace que el texto fluya alrededor de la imagen */
-  margin-bottom: -60px; /* Espaciado inferior */
-  margin-right: 445px;
-}
-
