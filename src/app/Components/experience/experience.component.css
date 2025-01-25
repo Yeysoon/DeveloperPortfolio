@@ -7,11 +7,11 @@ html, body {
 .experience-container {
   padding: 32px; /* 2rem en px */
   color: white;
-  width: 800px; /* Reducido de 1120px */
+  width: 720px; /* Reducido de 1120px */
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
-  margin-top: 150px;
+  margin-top: 175px;
 }
 
 .section-header {
