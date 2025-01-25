@@ -74,7 +74,8 @@ nav li {
   text-decoration: none;
   border-radius: 15px;
   transition: background-color 1s;
-  margin-left: 1rem; /* Espacio entre el logo y el botón */
+  margin-left: -1.5rem; /* Espacio entre el logo y el botón */
+  margin-right: 15px;
   border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
   animation: subtleGlow 3s infinite alternate;
 }
