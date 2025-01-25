@@ -21,6 +21,7 @@ body {
 .main-container {
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
+  margin-top: 95px;
 }
 
 .contact-container {
