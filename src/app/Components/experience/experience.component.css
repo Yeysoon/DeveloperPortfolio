@@ -120,23 +120,17 @@ html, body {
   height: auto; /* Mantener proporción */
   float: right; /* Hace que el texto fluya alrededor de la imagen */
   margin-bottom: -60px; /* Espaciado inferior */
-  margin-right: 410px;
 }
 
-/* Media queries para responsividad */
-@media (max-width: 900px) {
-  .experience-container {
-    width: 880px; /* 55% de 1600px */
-  }
+
 
   .experience-content .description {
     max-width: 100%; /* Ajuste para mejor lectura */
   }
-}
 
 @media (max-width: 768px) {
   .experience-container {
-    width: 768px; /* Ancho fijo para pantallas pequeñas */
+    width: 80px; /* Ancho fijo para pantallas pequeñas */
     padding: 32px; /* 2rem en px */
   }
 
