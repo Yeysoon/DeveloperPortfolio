@@ -31,8 +31,8 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  height: 100vh; /* Altura total de la vista para centrar verticalmente */
   box-sizing: border-box;
+  margin-top: 250px;
 }
 
 .profile-pic {
