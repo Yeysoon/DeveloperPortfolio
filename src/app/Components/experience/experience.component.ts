@@ -27,6 +27,7 @@ export class ExperienceComponent {
       knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
       logo: '/logos/MprhWhite.png'
     },
+  ];
 
   experiences: Experience[] = [
     {
