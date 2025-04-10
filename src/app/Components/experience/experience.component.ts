@@ -17,12 +17,23 @@ interface Experience {
 })
 export class ExperienceComponent {
 
+  experiences4: Experience[] = [
+    {
+
+      role: 'Software QA Analyst',
+      company: 'Arrenco Gasolineras Don Arturo · Jornada Completa',
+      date: 'Abril. 2025 - Presente · 8 meses | Guatemala',
+      description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentacion de aplicaciones, brinda soporte tecnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
+      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
+      logo: '/logos/MprhWhite.png'
+    },
+
   experiences: Experience[] = [
     {
 
       role: 'STA Assistant - HR PROJECTS',
       company: 'MPRH · Jornada Completa',
-      date: 'Ene. 2025 - Presente · 8 meses | Guatemala',
+      date: 'Ene. 2025 - Abril 2025 · 9 meses | Palín Escuintla',
       description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentacion de aplicaciones, brinda soporte tecnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
       knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
       logo: '/logos/MprhWhite.png'
