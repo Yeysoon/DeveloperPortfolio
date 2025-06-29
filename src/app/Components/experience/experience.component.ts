@@ -39,16 +39,7 @@ export class ExperienceComponent {
       knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
       logo: '/logos/MprhWhite.png'
     },
-    {
-      role: 'HR Metrics Assistant IT RRHH',
-      company: 'MPRH · Jornada Completa',
-      date: 'Jul. 2024 - Dic. 2024 · 6 meses | Palín Escuintla',
-      description: 'Soporte en la implementación de aplicaciones, sistemas y reportería interna a Talento Humano, proporcionando asistencia técnica a todo el personal del departamento, contribuyendo a la automatización y eficiencia de los procesos, administración de bases de datos, y mejora continua de los sistemas de información.',
-      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic(VBA) · Analisis de Datos · Soporte en sitio',
-      logo: '/logos/MprhWhite.png'
-    },
   ];
-
 
   experiences2: Experience[] = [
     {
