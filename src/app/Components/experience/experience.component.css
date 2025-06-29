@@ -70,6 +70,7 @@ html, body {
 .experience-content {
   display: flex;
   flex-direction: column;
+  margin-bottom: inherit;
   gap: 8px;
 }
 
