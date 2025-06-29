@@ -16,7 +16,10 @@
           <img *ngIf="exp.logo" [src]="exp.logo" alt="Company Logo" class="company-logo" />
         </h3>
         <h4>{{ exp.company }}</h4>
-        <p class="date">{{ exp.date }}</p>
+        <p class="date" *ngIf="exp.startDate">
+          {{ calcularTiempoTranscurrido(exp.startDate) }}
+          <span *ngIf="exp.location">| {{ exp.location }}</span>
+        </p>
         <p class="description">{{ exp.description }}</p>
         <a *ngIf="exp.knowMore" class="know-more">{{ exp.knowMore }}</a>
       </div>

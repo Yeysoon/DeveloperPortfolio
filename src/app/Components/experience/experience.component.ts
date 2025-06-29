@@ -7,6 +7,8 @@ interface Experience {
   description: string;
   knowMore?: string;
   logo?: string;
+  startDate?: string;
+  location?: string;
 }
 
 @Component({
@@ -21,10 +23,12 @@ export class ExperienceComponent {
     {
       role: 'Software QA Analyst',
       company: 'Arrenco Gasolineras Don Arturo · Jornada Híbrida',
-      date: 'Abril. 2025 - Presente · 2 meses | Mixco Guatemala',
+      startDate: '2025-04-07',
+      location: 'Mixco, Guatemala',
       description: 'Especialista en la implementación de aplicaciones, sistemas y reportería interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentación de aplicaciones, brinda soporte técnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
       knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Análisis de Datos · SQL Reporting Services',
-      logo: '/logos/MprhWhite.png'
+      logo: '/logos/MprhWhite.png',
+      date: ''
     }
   ];
 
@@ -54,4 +58,22 @@ export class ExperienceComponent {
       logo: '/logos/GrupoAlzaWhite.png'
     }
   ];
+
+  calcularTiempoTranscurrido(inicio: string): string {
+    const fechaInicio = new Date(inicio);
+    const hoy = new Date();
+
+    const mesesTotales = (hoy.getFullYear() - fechaInicio.getFullYear()) * 12 + (hoy.getMonth() - fechaInicio.getMonth());
+    const fechaReferencia = new Date(fechaInicio.getFullYear(), fechaInicio.getMonth() + mesesTotales, fechaInicio.getDate());
+    const diasExtras = Math.floor((hoy.getTime() - fechaReferencia.getTime()) / (1000 * 60 * 60 * 24));
+
+    const nombreMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const mesInicio = nombreMeses[fechaInicio.getMonth()];
+    const anioInicio = fechaInicio.getFullYear();
+
+    return `${mesInicio} ${anioInicio} – Presente · ${mesesTotales} Mes${mesesTotales === 1 ? '' : 'es'} y ${diasExtras} Día${diasExtras === 1 ? '' : 's'}`;
+  }
+
+
+
 }
