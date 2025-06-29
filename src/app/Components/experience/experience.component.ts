@@ -17,48 +17,40 @@ interface Experience {
 })
 export class ExperienceComponent {
 
-  experiences4: Experience[] = [
+  experienciaProfesional: Experience[] = [
     {
-
       role: 'Software QA Analyst',
-      company: 'Arrenco Gasolineras Don Arturo · Jornada Hibrida',
+      company: 'Arrenco Gasolineras Don Arturo · Jornada Híbrida',
       date: 'Abril. 2025 - Presente · 2 meses | Mixco Guatemala',
-      description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentacion de aplicaciones, brinda soporte tecnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
-      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
+      description: 'Especialista en la implementación de aplicaciones, sistemas y reportería interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentación de aplicaciones, brinda soporte técnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
+      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Análisis de Datos · SQL Reporting Services',
       logo: '/logos/MprhWhite.png'
-    },
-  ];
-
-  experiences: Experience[] = [
-    {
-
-      role: 'STA Assistant - HR PROJECTS',
-      company: 'MPRH · Jornada Completa',
-      date: 'Ene. 2025 - Abril 2025 · 9 meses | Palín Escuintla',
-      description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentacion de aplicaciones, brinda soporte tecnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
-      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
-      logo: '/logos/MprhWhite.png'
-    },
-  ];
-
-  experiences2: Experience[] = [
-    {
-      role: 'Production Assistant',
-      company: 'Kerry · Jornada Completa',
-      date: 'Sept. 2022 - Jul. 2024 · 1 año 11 meses | Amatitlan, Guatemala',
-      description: 'Responsable del análisis de ordenes de producción, validando costos dentro de ERP SAP, cantidades proyectadas, carga y retornos de productos utilizados en recetas incluyendo cierre TECO a las mismas, confirmaciones y des confirmaciones de fases de tiempo de procesos, resolución de casos específicos en el proceso, inventario general del depto, seguimiento a la programación semanal de la producción entre otros.',
-      knowMore: 'ERP SAP · Suite Office · Resolución de Problemas · Análisis de datos · Trabajo en equipo',
-      logo: '/logos/KerryWhite.png'
     }
   ];
 
-  experiences3: Experience[] = [
+  experienciasAnteriores: Experience[] = [
+    {
+      role: 'STA Assistant - HR PROJECTS',
+      company: 'MPRH · Jornada Completa',
+      date: 'Ene. 2025 - Abril 2025 · 9 meses | Palín Escuintla',
+      description: 'Especialista en la implementación de aplicaciones, sistemas y reportería interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentación de aplicaciones, brinda soporte técnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
+      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Análisis de Datos · SQL Reporting Services',
+      logo: '/logos/MprhWhite.png'
+    },
+    {
+      role: 'Production Assistant',
+      company: 'Kerry · Jornada Completa',
+      date: 'Sept. 2022 - Jul. 2024 · 1 año 11 meses | Amatitlán, Guatemala',
+      description: 'Responsable del análisis de órdenes de producción, validando costos dentro de ERP SAP, cantidades proyectadas, carga y retornos de productos utilizados en recetas incluyendo cierre TECO a las mismas, confirmaciones y desconfirmaciones de fases de tiempo de procesos, resolución de casos específicos en el proceso, inventario general del depto, seguimiento a la programación semanal de la producción entre otros.',
+      knowMore: 'ERP SAP · Suite Office · Resolución de Problemas · Análisis de datos · Trabajo en equipo',
+      logo: '/logos/KerryWhite.png'
+    },
     {
       role: 'Cost Entry Assistant, Accounting Assistant',
-      company: 'Grupo Alza · Jornada completa | Amatitlan, Guatemala',
+      company: 'Grupo Alza · Jornada completa | Amatitlán, Guatemala',
       date: 'Nov. 2019 - Ago. 2022 · 2 años 10 meses',
-      description: 'Responsable de realizar el análisis validación de costos de operaciones de carga, retorno y cierre de OP así como control general de las ordenes, transformaciones de estas para realizar despachos hacia las diferentes bodegas, ingreso financiero de importaciones por (DUCA) y el costo de la materia prima.',
-      knowMore: 'INFOR LABEL · Suite Office · Habilidades Comunicativas · Empatía· Flexibilidad y Adaptabilidad',
+      description: 'Responsable de realizar el análisis validación de costos de operaciones de carga, retorno y cierre de OP así como control general de las órdenes, transformaciones de estas para realizar despachos hacia las diferentes bodegas, ingreso financiero de importaciones por (DUCA) y el costo de la materia prima.',
+      knowMore: 'INFOR LABEL · Suite Office · Habilidades Comunicativas · Empatía · Flexibilidad y Adaptabilidad',
       logo: '/logos/GrupoAlzaWhite.png'
     }
   ];

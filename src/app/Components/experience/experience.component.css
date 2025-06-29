@@ -1,36 +1,33 @@
-/* Evitar que el usuario haga zoom */
 html, body {
-  zoom: 1; /* Bloquear el zoom */
-  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+  zoom: 1;
+  overflow-x: hidden;
 }
 
 .experience-container {
-  padding: 32px; /* 2rem en px */
+  padding: 32px;
   color: white;
-  width: 720px; /* Reducido de 1120px */
-  margin-left: auto;
-  margin-right: auto;
+  width: 720px;
+  margin: 40px auto 0 auto;
   text-align: justify;
-  margin-top: 175px;
 }
 
 .section-header {
   display: flex;
   align-items: center;
-  gap: 16px; /* 1rem en px */
-  margin-bottom: 32px; /* 2rem en px */
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .briefcase-icon {
   width: 40px;
   height: 40px;
-  background-image: url('/icons/Experience.png'); /* Reemplaza con tu imagen */
+  background-image: url('/icons/Experience.png');
   background-size: cover;
 }
 
 .timeline {
   position: relative;
-  padding-left: 32px; /* 2rem en px */
+  padding-left: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -48,8 +45,9 @@ html, body {
 .experience-item {
   position: relative;
   display: flex;
-  gap: 32px; /* 2rem en px */
-  margin-bottom: 48px; /* 3rem en px */
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 
 .experience-item:last-child {
@@ -58,7 +56,7 @@ html, body {
 
 .timeline-dot {
   position: absolute;
-  left: -38.4px; /* 2.4rem en px */
+  left: -38.4px;
   width: 12px;
   height: 12px;
   background-color: #FFD700;
@@ -69,52 +67,41 @@ html, body {
 .experience-content {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* 0.5rem en px */
+  gap: 8px;
 }
 
 .experience-content h3 {
   color: #FFD700;
-  font-size: 20px; /* 1.25rem en px */
+  font-size: 20px;
   font-weight: 600;
 }
 
 .experience-content h4 {
-  font-size: 16px; /* 1rem en px */
-  margin-bottom: 4px; /* 0.25rem en px */
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .experience-content .date {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 14.4px; /* 0.9rem en px */
+  font-size: 14.4px;
 }
-
-
 
 .experience-content .description {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  max-width: 60%;
+  max-width: 100%;
 }
 
 .experience-content .know-more {
   color: #FFD700;
   text-decoration: none;
-  font-size: 14.4px; /* 0.9rem en px */
+  font-size: 14.4px;
   cursor: pointer;
 }
 
-
 .company-logo {
-  width: 110px; /* Tamaño del logo */
-  height: auto; /* Mantener proporción */
-  float: right; /* Hace que el texto fluya alrededor de la imagen */
-  margin-bottom: -60px; /* Espaciado inferior */
-}
-
-.experience-content .description {
-  max-width: 100%; /* Ajuste para mejor lectura */
-}
-
-.experience-item {
-  flex-direction: column;
+  width: 110px;
+  height: auto;
+  float: right;
+  margin-bottom: -60px;
 }
