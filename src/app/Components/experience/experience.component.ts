@@ -21,7 +21,7 @@ export class ExperienceComponent {
     {
 
       role: 'Software QA Analyst',
-      company: 'Arrenco Gasolineras Don Arturo · Jornada Completa',
+      company: 'Arrenco Gasolineras Don Arturo · Jornada Hibrida',
       date: 'Abril. 2025 - Presente · 2 meses | Mixco Guatemala',
       description: 'Especialista en la implementación de aplicaciones, sistemas y reporteria interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentacion de aplicaciones, brinda soporte tecnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
       knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Analisis de Datos · SQL Reporting Services',
