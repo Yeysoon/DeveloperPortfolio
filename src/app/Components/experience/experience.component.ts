@@ -97,7 +97,7 @@ calcularTiempoTranscurrido(inicio: string | undefined): string {
   const mesInicio = mesesNombres[fechaInicio.getMonth()];
   const anioInicio = fechaInicio.getFullYear();
 
-  return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' y ')}`;
+  return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' con ')}`;
 }
 
 
