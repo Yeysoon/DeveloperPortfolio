@@ -82,16 +82,23 @@ calcularTiempoTranscurrido(inicio: string | undefined): string {
   }
 
   const partes: string[] = [];
-  if (anios > 0) partes.push(`${anios} Año${anios > 1 ? 's' : ''}`);
-  if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
-  if (dias > 0) partes.push(`${dias} Día${dias > 1 ? 's' : ''}`);
+
+  if (anios > 0) {
+    partes.push(`${anios} Año${anios > 1 ? 's' : ''}`);
+    if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
+    // No incluimos días si ya pasó al menos 1 año
+  } else {
+    if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
+    if (dias > 0) partes.push(`${dias} Día${dias > 1 ? 's' : ''}`);
+  }
 
   const mesesNombres = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
                         'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
   const mesInicio = mesesNombres[fechaInicio.getMonth()];
   const anioInicio = fechaInicio.getFullYear();
 
-  return `${mesInicio} ${anioInicio} – Presente · ${partes.join('  ')}`;
+  return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' y ')}`;
 }
+
 
 }
