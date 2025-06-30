@@ -58,22 +58,40 @@ export class ExperienceComponent {
       logo: '/logos/GrupoAlzaWhite.png'
     }
   ];
+calcularTiempoTranscurrido(inicio: string | undefined): string {
+  if (!inicio) return '';
 
-  calcularTiempoTranscurrido(inicio: string): string {
-    const fechaInicio = new Date(inicio);
-    const hoy = new Date();
+  const fechaInicio = new Date(inicio);
+  if (isNaN(fechaInicio.getTime())) return 'Fecha inválida';
 
-    const mesesTotales = (hoy.getFullYear() - fechaInicio.getFullYear()) * 12 + (hoy.getMonth() - fechaInicio.getMonth());
-    const fechaReferencia = new Date(fechaInicio.getFullYear(), fechaInicio.getMonth() + mesesTotales, fechaInicio.getDate());
-    const diasExtras = Math.floor((hoy.getTime() - fechaReferencia.getTime()) / (1000 * 60 * 60 * 24));
+  const hoy = new Date();
 
-    const nombreMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    const mesInicio = nombreMeses[fechaInicio.getMonth()];
-    const anioInicio = fechaInicio.getFullYear();
+  let anios = hoy.getFullYear() - fechaInicio.getFullYear();
+  let meses = hoy.getMonth() - fechaInicio.getMonth();
+  let dias = hoy.getDate() - fechaInicio.getDate();
 
-    return `${mesInicio} ${anioInicio} – Presente · ${mesesTotales} Mes${mesesTotales === 1 ? '' : 'es'} y ${diasExtras} Día${diasExtras === 1 ? '' : 's'}`;
+  if (dias < 0) {
+    meses--;
+    const mesAnterior = new Date(hoy.getFullYear(), hoy.getMonth(), 0);
+    dias += mesAnterior.getDate();
   }
 
+  if (meses < 0) {
+    anios--;
+    meses += 12;
+  }
 
+  const partes: string[] = [];
+  if (anios > 0) partes.push(`${anios} Año${anios > 1 ? 's' : ''}`);
+  if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
+  if (dias > 0) partes.push(`${dias} Día${dias > 1 ? 's' : ''}`);
+
+  const mesesNombres = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const mesInicio = mesesNombres[fechaInicio.getMonth()];
+  const anioInicio = fechaInicio.getFullYear();
+
+  return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' y ')}`;
+}
 
 }
