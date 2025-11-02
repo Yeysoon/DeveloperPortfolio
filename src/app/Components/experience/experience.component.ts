@@ -25,8 +25,8 @@ export class ExperienceComponent {
       company: 'Arrenco Gasolineras Don Arturo · Jornada Completa, Hibrida',
       startDate: '2025-04-07',
       location: 'Mixco, Guatemala.',
-      description: 'Especialista en la implementación de aplicaciones, sistemas y reportería interna en el área de Recursos Humanos, con el objetivo de automatizar y facilitar procesos, administración de bases de datos, documentación de aplicaciones, brinda soporte técnico e identifica oportunidades de mejora en los sistemas de información, garantizando la eficiencia y seguridad de los datos corporativos.',
-      knowMore: 'Microsoft SQL Server · STA Web · Visual Basic · Análisis de Datos · SQL Reporting Services',
+      description: 'Especialista en Pruebas Automatizadas de UI/UX en aplicaciones Web y Móviles, con experiencia en detección de errores en ambientes de Test y Producción. Valido componentes visuales, flujos de usuario, API´s y servicios externos mediante DevTools y Postman, además de realizar verificaciones SQL Server. Participo en despliegues en producción, elaboro comunicados y brindo asesoría con manuales y videos de ayuda al usuario. Contribuyo de forma constante a la mejora continua y a la calidad integral de los sistemas.',
+      knowMore: 'Microsoft SQL Server · Postman · Api´s Testing · UI Testing · UX Validation · Design Testing (Web y Móvil)',
       logo: '/logos/LogoArturo.png',
       date: ''
     }
