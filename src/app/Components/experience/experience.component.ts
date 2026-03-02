@@ -23,7 +23,7 @@ export class ExperienceComponent {
     {
       role: 'Software QA Analyst',
       company: 'Arrenco Gasolineras Don Arturo · Jornada Completa, Hibrida',
-      startDate: '2025-04-07',
+      startDate: '2025-03-07',
       location: 'Mixco, Guatemala.',
       description: 'Especialista en Pruebas Automatizadas de UI/UX en aplicaciones Web y Móviles, con experiencia en detección de errores en ambientes de Test y Producción. Valido componentes visuales, flujos de usuario, API´s y servicios externos mediante DevTools y Postman, además de realizar verificaciones SQL Server. Participo en despliegues en producción, elaboro comunicados y brindo asesoría con manuales y videos de ayuda al usuario. Contribuyo de forma constante a la mejora continua y a la calidad integral de los sistemas.',
       knowMore: 'Microsoft SQL Server · Postman · Api´s Testing · UI Testing · UX Validation · Design Testing (Web y Móvil)',
