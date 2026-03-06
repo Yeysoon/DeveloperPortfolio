@@ -2,41 +2,51 @@
   0% {
     box-shadow: 0 0 2px rgba(7, 11, 68, 0.2);
   }
+
   50% {
     box-shadow: 0 0 5px rgba(75, 72, 231, 0.4);
   }
+
   100% {
     box-shadow: 0 0 2px rgba(29, 18, 95, 0.2);
   }
 }
 
 body {
-  background: linear-gradient(to right, #000428, #004e92); /* Degradado de fondo */
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  background: linear-gradient(to right, #000428, #004e92);
+  /* Degradado de fondo */
+  font-family: 'Poppins', sans-serif;
+  /* Aplicar la fuente Poppins */
   margin: 0;
   padding: 0;
-  color: white; /* Cambiar el color del texto global */
+  color: white;
+  /* Cambiar el color del texto global */
 }
 
 .main-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
   margin-top: 95px;
 }
 
 .contact-container {
-  max-width: 600px; /* Ancho adecuado para el formulario de contacto */
+  max-width: 600px;
+  /* Ancho adecuado para el formulario de contacto */
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Fondo transparente */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: white; /* Cambiar el color del texto dentro del contenedor */
+  color: white;
+  /* Cambiar el color del texto dentro del contenedor */
 }
 
 .contact-container h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: white; /* Cambiar el color del título a blanco */
+  color: white;
+  /* Cambiar el color del título a blanco */
 }
 
 .contact-container form div {
@@ -46,7 +56,8 @@ body {
 .contact-container label {
   display: block;
   margin-bottom: 0.5rem;
-  color: white; /* Cambiar el color del texto de los labels a blanco */
+  color: white;
+  /* Cambiar el color del texto de los labels a blanco */
 }
 
 .contact-container input,
@@ -55,66 +66,87 @@ body {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente en los inputs */
-  color: white; /* Cambiar el color del texto a blanco */
+  font-family: 'Poppins', sans-serif;
+  /* Aplicar la fuente Poppins */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Fondo transparente en los inputs */
+  color: white;
+  /* Cambiar el color del texto a blanco */
 }
 
 .contact-container input:hover,
 .contact-container textarea:hover {
-  border-color: #f5f5dc; /* Cambiar el color del borde al hacer hover */
+  border-color: #f5f5dc;
+  /* Cambiar el color del borde al hacer hover */
 }
 
 .contact-container textarea {
-  overflow: hidden; /* Importante para ocultar el scrollbar */
-  resize: none;     /* Desactivar el resize manual */
+  overflow: hidden;
+  /* Importante para ocultar el scrollbar */
+  resize: none;
+  /* Desactivar el resize manual */
 }
 
 .contact-container button {
   width: 100%;
   padding: 0.5rem;
-  background-color: #f5f5dc; /* Color beige para el botón */
-  color: #333; /* Cambiar el color de la fuente a oscuro para el contraste */
+  background-color: #f5f5dc;
+  /* Color beige para el botón */
+  color: #333;
+  /* Cambiar el color de la fuente a oscuro para el contraste */
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
-  font-weight: bold; /* Poner la fuente en negrita */
+  font-family: 'Poppins', sans-serif;
+  /* Aplicar la fuente Poppins */
+  font-weight: bold;
+  /* Poner la fuente en negrita */
 }
 
 .contact-container button:hover {
-  background-color: #e5e5c9; /* Beige más oscuro para el efecto hover */
+  background-color: #e5e5c9;
+  /* Beige más oscuro para el efecto hover */
 }
 
 .contact-container button:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Añadir un resplandor al enfocarlo */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  /* Añadir un resplandor al enfocarlo */
 }
 
 .social-section {
-  position: fixed; /* Fija la sección de redes sociales en la ventana */
-  top: 50%; /* Coloca la sección a la mitad de la pantalla */
-  right: 2rem; /* Ajusta este valor según tus necesidades */
-  transform: translateY(-50%); /* Centra la sección verticalmente */
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  position: fixed;
+  /* Fija la sección de redes sociales en la ventana */
+  top: 50%;
+  /* Coloca la sección a la mitad de la pantalla */
+  right: 2rem;
+  /* Ajusta este valor según tus necesidades */
+  transform: translateY(-50%);
+  /* Centra la sección verticalmente */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Fondo transparente */
   border-radius: 8px;
   transition: background-color 2s;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: justify;
-  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  border: 0.1px solid #1a1a1a5e;
+  /* Borde negro muy delgado */
   animation: subtleGlow 3s infinite alternate;
 }
 
 .social-section:hover {
-  background-color: #04042944; /* Color del botón al pasar el puntero */
-  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  background-color: #04042944;
+  /* Color del botón al pasar el puntero */
+  border: 0.1px solid #1a1a1a5e;
+  /* Borde negro muy delgado */
   animation: subtleGlow 15s infinite alternate;
 }
 
 .social-section h3 {
-  color: white; /* Cambiar el color del texto a blanco */
+  color: white;
+  /* Cambiar el color del texto a blanco */
   margin-bottom: 1rem;
 }
 
@@ -128,7 +160,8 @@ body {
 }
 
 .social-section a {
-  color: #f5f5dc; /* Color de los enlaces a beige */
+  color: #f5f5dc;
+  /* Color de los enlaces a beige */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -138,10 +171,17 @@ body {
   width: 24px;
   height: 24px;
   margin-right: 0.5rem;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: brightness(1.2) sepia(1) hue-rotate(10deg) saturate(5);
+  transform: scale(1.2);
 }
 
 .social-section a:hover {
-  color: #e5e5c9; /* Color más oscuro para el efecto hover */
+  color: #e5e5c9;
+  /* Color más oscuro para el efecto hover */
 }
 
 .error-message {
