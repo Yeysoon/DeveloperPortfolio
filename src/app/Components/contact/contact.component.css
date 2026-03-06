@@ -188,3 +188,38 @@ body {
   color: rgb(114, 148, 120);
   font-size: 0.875rem;
 }
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    padding: 15px;
+  }
+
+  .contact-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .social-section {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-section ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social-section li {
+    margin-bottom: 0;
+  }
+}

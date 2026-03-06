@@ -2,6 +2,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 17%;
   }
@@ -15,7 +16,8 @@
 
 .typewriter {
   overflow: hidden;
-  border-right: .15em solid orange; /* Efecto del cursor de escritura */
+  border-right: .15em solid orange;
+  /* Efecto del cursor de escritura */
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
@@ -39,10 +41,13 @@
   width: 310px;
   height: 410px;
   border-radius: 2.5%;
-  margin-right: 110px; /* Separación prudente de la foto */
-  object-fit: cover; /* Para asegurar que la imagen se ajuste bien */
+  margin-right: 110px;
+  /* Separación prudente de la foto */
+  object-fit: cover;
+  /* Para asegurar que la imagen se ajuste bien */
   transform: rotate(4.1deg);
-  border: 0.1px solid rgba(64, 107, 163, 0.2); /* Borde negro muy delgado y transparente */
+  border: 0.1px solid rgba(64, 107, 163, 0.2);
+  /* Borde negro muy delgado y transparente */
   animation:
     typewriter 0.5s steps(40, end) 1s 1 normal both,
     blinkCaret 0s step-end infinite;
@@ -53,7 +58,8 @@
   text-align: justify;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centrar contenido verticalmente */
+  justify-content: center;
+  /* Centrar contenido verticalmente */
 }
 
 .about-me-content h2 {
@@ -64,4 +70,29 @@
 
 .about-me-content p {
   line-height: 1.6;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 260px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-me-content {
+    max-width: 100%;
+  }
+
+  .about-me-content h2 {
+    font-size: 1.3rem;
+  }
 }

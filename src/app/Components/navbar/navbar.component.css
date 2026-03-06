@@ -2,9 +2,11 @@
   0% {
     box-shadow: 0 0 2px rgba(7, 11, 68, 0.2);
   }
+
   50% {
     box-shadow: 0 0 5px rgba(75, 72, 231, 0.4);
   }
+
   100% {
     box-shadow: 0 0 2px rgba(29, 18, 95, 0.2);
   }
@@ -38,51 +40,105 @@ nav ul {
 
 nav li {
   text-align: center;
-  margin: 0 5px; /* Espacio entre los elementos */
+  margin: 0 5px;
+  /* Espacio entre los elementos */
 }
 
 .nav-item {
-  color: #fff; /* Color del texto */
+  color: #fff;
+  /* Color del texto */
   padding: 10px 15px;
   text-decoration: none;
   transition: background-color 0.3s, border-radius 0.3s;
-  background-color: transparent; /* Fondo transparente por defecto */
-  border-radius: 20px; /* Bordes redondeados */
+  background-color: transparent;
+  /* Fondo transparente por defecto */
+  border-radius: 20px;
+  /* Bordes redondeados */
 }
 
 .nav-item:hover {
-  background-color: rgba(146, 141, 141, 0.24); /* Color de fondo al pasar el puntero */
+  background-color: rgba(146, 141, 141, 0.24);
+  /* Color de fondo al pasar el puntero */
 }
 
 .nav-item.active {
-  background-color: rgba(146, 141, 141, 0.24); /* Color de fondo de la opción activa */
+  background-color: rgba(146, 141, 141, 0.24);
+  /* Color de fondo de la opción activa */
   color: rgb(255, 255, 255);
-  border-radius: 20px; /* Bordes redondeados para la opción activa */
-  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  border-radius: 20px;
+  /* Bordes redondeados para la opción activa */
+  border: 0.1px solid #1a1a1a5e;
+  /* Borde negro muy delgado */
   animation: subtleGlow 3s infinite alternate;
 }
 
 .logo {
-  height: 25px; /* Ajusta el tamaño del logo */
+  height: 25px;
+  /* Ajusta el tamaño del logo */
   margin-left: 1rem;
 }
 
 .download-btn {
-  background-color: rgba(146, 141, 141, 0.24); /* Color del botón de descarga */
+  background-color: rgba(146, 141, 141, 0.24);
+  /* Color del botón de descarga */
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 15px;
   transition: background-color 1s;
-  margin-left: -1.5rem; /* Espacio entre el logo y el botón */
+  margin-left: -1.5rem;
+  /* Espacio entre el logo y el botón */
   margin-right: 15px;
-  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  border: 0.1px solid #1a1a1a5e;
+  /* Borde negro muy delgado */
   animation: subtleGlow 3s infinite alternate;
 }
 
 .download-btn:hover {
-  background-color: rgba(145, 34, 34, 0.705); /* Color del botón al pasar el puntero */
-  border: 0.1px solid #1a1a1a5e; /* Borde negro muy delgado */
+  background-color: rgba(145, 34, 34, 0.705);
+  /* Color del botón al pasar el puntero */
+  border: 0.1px solid #1a1a1a5e;
+  /* Borde negro muy delgado */
   animation: subtleGlow 3s infinite alternate;
 }
 
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .logo {
+    height: 18px;
+    margin-left: 0;
+  }
+
+  .nav-container {
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 2px;
+  }
+
+  .nav-item {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+
+  .download-btn {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

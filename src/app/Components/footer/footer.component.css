@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
-  background: linear-gradient(to bottom, #454555, #080425); /* Degradado de fondo */
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  background: linear-gradient(to bottom, #454555, #080425);
+  /* Degradado de fondo */
+  font-family: 'Poppins', sans-serif;
+  /* Aplicar la fuente Poppins */
   margin: 0;
   padding: 0;
-  color: white; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+  color: white;
+  /* Cambiar el color del texto para que sea visible en el fondo oscuro */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegurar que el body tenga al menos la altura de la ventana */
+  min-height: 100vh;
+  /* Asegurar que el body tenga al menos la altura de la ventana */
 }
 
 .content-wrapper {
-  flex: 1; /* Permitir que el contenido principal se expanda */
+  flex: 1;
+  /* Permitir que el contenido principal se expanda */
 }
 
 footer {
   width: 100%;
   background-color: #1a1a1a;
   color: #fff;
-  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+  font-family: 'Poppins', sans-serif;
+  /* Aplicar la fuente Poppins */
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -30,7 +36,8 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-between; /* Asegura que los elementos se distribuyan adecuadamente */
+  justify-content: space-between;
+  /* Asegura que los elementos se distribuyan adecuadamente */
 }
 
 .footer-left {
@@ -63,7 +70,8 @@ footer {
 
 .footer-right {
   display: flex;
-  gap: 15px;   /* Espacio entre los iconos */
+  gap: 15px;
+  /* Espacio entre los iconos */
 }
 
 .social-icon {
@@ -92,4 +100,41 @@ footer {
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-image {
+    width: 70px;
+  }
+
+  .footer-separator {
+    width: 50px;
+    height: 2px;
+  }
+
+  .footer-text h3,
+  .footer-text p {
+    font-size: 12px;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
 }
