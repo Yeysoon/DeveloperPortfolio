@@ -11,6 +11,7 @@ export interface Project {
   image3: string;
   technologies: string[];
   links: {
+    preview?: string;
     code?: string;
     code2?: string;
   };
@@ -33,7 +34,7 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
       image3: '/images/SIGLADADMIN.jpg',
       technologies: ['Express', 'Postgre SQL', 'AnimeJs', 'Java Script'],
       links: {
-        code: 'https://siglad-proyectowebapp.onrender.com/',
+        preview: 'https://siglad-proyectowebapp.onrender.com/',
         code2: 'https://github.com/Yeysoon/SIGLAD-ProyectoWebApp',
       }
     },
