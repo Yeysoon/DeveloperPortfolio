@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   contact = {
     name: '',
     email: '',
@@ -28,7 +29,53 @@ export class ContactComponent {
   ];
 
   secondTimeSending: boolean = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
+
+  ngAfterViewInit(): void {
+    this.runAnimations();
+  }
+
+  private runAnimations(): void {
+    // Title fade-in
+    anime({
+      targets: '.contact-container h2',
+      opacity: [0, 1],
+      translateY: [-15, 0],
+      duration: 700,
+      delay: anime.stagger(150),
+      easing: 'easeOutCubic'
+    });
+
+    // Form fields - slide up stagger
+    anime({
+      targets: '.contact-container form > div',
+      opacity: [0, 1],
+      translateY: [25, 0],
+      duration: 600,
+      delay: anime.stagger(120, { start: 300 }),
+      easing: 'easeOutCubic'
+    });
+
+    // Submit button - scale in
+    anime({
+      targets: '.contact-container button',
+      opacity: [0, 1],
+      scale: [0.8, 1],
+      duration: 600,
+      delay: 700,
+      easing: 'easeOutBack'
+    });
+
+    // Social icons - stagger
+    anime({
+      targets: '.left-section .social-icons li',
+      opacity: [0, 1],
+      translateY: [15, 0],
+      duration: 500,
+      delay: anime.stagger(80, { start: 500 }),
+      easing: 'easeOutCubic'
+    });
+  }
 
   updateGreeting() {
     const name = this.contact.name || '';

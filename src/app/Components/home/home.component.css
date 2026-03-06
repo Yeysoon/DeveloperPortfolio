@@ -2,9 +2,11 @@
   0% {
     box-shadow: 0 0 2px rgba(7, 11, 68, 0.2);
   }
+
   50% {
     box-shadow: 0 0 5px rgba(75, 72, 231, 0.4);
   }
+
   100% {
     box-shadow: 0 0 2px rgba(29, 18, 95, 0.2);
   }
@@ -12,20 +14,41 @@
 
 /* Estilos generales */
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 17%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 17%;
+  }
 }
 
 @keyframes blinkCaret {
-  100% { border-color: white; }
+  100% {
+    border-color: white;
+  }
 }
 
 @keyframes borderAnimation {
-  0% { border-color: rgba(255, 255, 255, 0.123); }
-  25% { border-color: rgba(0, 17, 255, 0.123); }
-  50% { border-color: rgba(139, 147, 214, 0.123); }
-  75% { border-color: rgba(37, 37, 112, 0.123); }
-  100% { border-color: rgba(170, 166, 177, 0.123); }
+  0% {
+    border-color: rgba(255, 255, 255, 0.123);
+  }
+
+  25% {
+    border-color: rgba(0, 17, 255, 0.123);
+  }
+
+  50% {
+    border-color: rgba(139, 147, 214, 0.123);
+  }
+
+  75% {
+    border-color: rgba(37, 37, 112, 0.123);
+  }
+
+  100% {
+    border-color: rgba(170, 166, 177, 0.123);
+  }
 }
 
 .typewriter {
@@ -97,6 +120,9 @@
 .about-me-content h1 {
   margin-bottom: 1px;
   text-align: justify;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .about-me-content p {
@@ -156,18 +182,15 @@
 }
 
 .disponible-boton {
-  left: 100px;
-  top: 100%;
-  transform: translate(162px, -8px);
+  margin-left: auto;
   background-color: #2f415762;
   border: 2px solid rgb(219, 219, 219);
   color: white;
-  padding: 3px 6px;
+  padding: 3px 10px;
   font-size: 10px;
-  text-align: left;
   font-weight: bold;
   border-radius: 150px;
-  display: inline-block;
+  white-space: nowrap;
   animation: borderAnimation 2s infinite;
 }
 
@@ -178,7 +201,8 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  margin-top: 20px; /* Ajusta este valor según sea necesario */
+  margin-top: 20px;
+  /* Ajusta este valor según sea necesario */
 }
 
 .licenses-content {
@@ -192,16 +216,21 @@
 .licence-title {
   display: flex;
   align-items: center;
-  justify-content: center; /* Si deseas centrar ambos elementos */
+  justify-content: center;
+  /* Si deseas centrar ambos elementos */
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 100px; /* Asegúrate de que "px" esté en minúsculas */
+  margin-top: 100px;
+  /* Asegúrate de que "px" esté en minúsculas */
 }
 
 .licence-title img {
-  margin-right: 40px; /* Ajusta el espacio entre la imagen y el título */
-  width: 45px; /* Cambia el tamaño según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  margin-right: 40px;
+  /* Ajusta el espacio entre la imagen y el título */
+  width: 45px;
+  /* Cambia el tamaño según tus necesidades */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
 }
 
 .license-item {
@@ -238,33 +267,41 @@
 
 .show-credential-button {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1); /* Azul brillante */
-  color: rgb(255, 255, 255); /* Texto blanco */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Azul brillante */
+  color: rgb(255, 255, 255);
+  /* Texto blanco */
   border: none;
   padding: 10px 20px;
-  border-radius: 13px; /* Botones redondeados */
+  border-radius: 13px;
+  /* Botones redondeados */
   font-size: 12px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   box-sizing: border-box;
-  text-align: center; /* Centra el texto */
-  width: 35%; /* Ajusta el ancho automáticamente */
-  height: 0%; /* Ajusta la altura automáticamente */
+  text-align: center;
+  /* Centra el texto */
+  width: 35%;
+  /* Ajusta el ancho automáticamente */
+  height: 0%;
+  /* Ajusta la altura automáticamente */
   background-color: #04042944;
   border: 0.1px solid #1a1a1a5e;
   animation: subtleGlow 15s infinite alternate;
 }
 
 .show-credential-button:hover {
-  transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  transform: scale(1.05);
+  /* Aumenta el tamaño ligeramente al pasar el mouse */
   background-color: #04042944;
   border: 0.1px solid #ffffff85;
   animation: subtleGlow 15s infinite alternate;
 }
 
-.separator{
+.separator {
   margin-top: 50px;
 }
+
 .categorias-container {
   display: flex;
   flex-wrap: wrap;
@@ -272,33 +309,44 @@
   align-items: center;
   gap: 10px;
   padding: 20px;
-  padding-left:70px;
-  max-width: 40%; /* Ajusta este valor según el espacio disponible */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  border: 1px solid transparent; /* Borde transparente */
+  padding-left: 70px;
+  max-width: 40%;
+  /* Ajusta este valor según el espacio disponible */
+  margin: 0 auto;
+  /* Centra el contenedor horizontalmente */
+  border: 1px solid transparent;
+  /* Borde transparente */
 }
 
 .categoria-btn {
-  background-color: rgba(255, 255, 255, 0.1); /* Azul brillante */
-  color: white; /* Texto blanco */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Azul brillante */
+  color: white;
+  /* Texto blanco */
   border: none;
   padding: 10px 20px;
-  border-radius: 14px; /* Botones redondeados */
+  border-radius: 14px;
+  /* Botones redondeados */
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   box-sizing: border-box;
-  text-align: center; /* Centra el texto */
-  width: auto; /* Ajusta el ancho automáticamente */
-  height: auto; /* Ajusta la altura automáticamente */
-  margin: 5px; /* Espacio alrededor de los botones */
+  text-align: center;
+  /* Centra el texto */
+  width: auto;
+  /* Ajusta el ancho automáticamente */
+  height: auto;
+  /* Ajusta la altura automáticamente */
+  margin: 5px;
+  /* Espacio alrededor de los botones */
   background-color: #04042944;
   border: 0.1px solid #1baab45b;
   animation: subtleGlow 15s infinite alternate;
 }
 
 .categoria-btn:hover {
-  transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  transform: scale(1.05);
+  /* Aumenta el tamaño ligeramente al pasar el mouse */
   background-color: #04042944;
   border: 0.1px solid #1a1a1a5e;
   animation: subtleGlow 15s infinite alternate;

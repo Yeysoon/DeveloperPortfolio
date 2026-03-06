@@ -1,5 +1,6 @@
 // projects.component.ts
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import anime from 'animejs/lib/anime.es.js';
 
 export interface Project {
   title: string;
@@ -21,7 +22,7 @@ export interface Project {
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
   projects: Project[] = [
     {
       title: 'SIGLAD Aplication API RESTful (Project University)',
@@ -78,6 +79,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     });
   }
 
+  ngAfterViewInit(): void {
+    this.runAnimations();
+  }
+
   ngOnDestroy() {
     Object.values(this.intervalIds).forEach(id => clearInterval(id));
   }
@@ -86,5 +91,37 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.intervalIds[project.title] = setInterval(() => {
       this.currentSlides[project.title] = (this.currentSlides[project.title] + 1) % 3;
     }, 3000);
+  }
+
+  private runAnimations(): void {
+    // Title
+    anime({
+      targets: '.projects-title',
+      opacity: [0, 1],
+      translateY: [-20, 0],
+      duration: 700,
+      easing: 'easeOutCubic'
+    });
+
+    // Project cards - scale + fade stagger
+    anime({
+      targets: '.project-card',
+      opacity: [0, 1],
+      scale: [0.9, 1],
+      translateY: [30, 0],
+      duration: 800,
+      delay: anime.stagger(200, { start: 300 }),
+      easing: 'easeOutCubic'
+    });
+
+    // Technology badges - stagger
+    anime({
+      targets: '.technology-badge',
+      opacity: [0, 1],
+      scale: [0.7, 1],
+      duration: 400,
+      delay: anime.stagger(40, { start: 800 }),
+      easing: 'easeOutBack'
+    });
   }
 }

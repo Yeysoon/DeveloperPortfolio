@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "animejs": "^3.2.2",
     "emailjs-com": "^3.2.0",
     "ngx-quill": "^27.0.0",
     "node.js": "^0.0.1-security",

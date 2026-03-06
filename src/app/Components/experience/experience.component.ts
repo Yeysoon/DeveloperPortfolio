@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import anime from 'animejs/lib/anime.es.js';
 
 interface Experience {
   role: string;
@@ -17,7 +18,7 @@ interface Experience {
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements AfterViewInit {
 
   experienciaProfesional: Experience[] = [
     {
@@ -58,47 +59,83 @@ export class ExperienceComponent {
       logo: '/logos/GrupoAlzaWhite.png'
     }
   ];
-calcularTiempoTranscurrido(inicio: string | undefined): string {
-  if (!inicio) return '';
 
-  const fechaInicio = new Date(inicio);
-  if (isNaN(fechaInicio.getTime())) return 'Fecha inválida';
-
-  const hoy = new Date();
-
-  let anios = hoy.getFullYear() - fechaInicio.getFullYear();
-  let meses = hoy.getMonth() - fechaInicio.getMonth();
-  let dias = hoy.getDate() - fechaInicio.getDate();
-
-  if (dias < 0) {
-    meses--;
-    const mesAnterior = new Date(hoy.getFullYear(), hoy.getMonth(), 0);
-    dias += mesAnterior.getDate();
+  ngAfterViewInit(): void {
+    this.runAnimations();
   }
 
-  if (meses < 0) {
-    anios--;
-    meses += 12;
+  private runAnimations(): void {
+    // Section headers - fade + slide down
+    anime({
+      targets: '.section-header',
+      opacity: [0, 1],
+      translateY: [-20, 0],
+      duration: 700,
+      delay: anime.stagger(200),
+      easing: 'easeOutCubic'
+    });
+
+    // Timeline dots - scale in with stagger
+    anime({
+      targets: '.timeline-dot',
+      opacity: [0, 1],
+      scale: [0, 1],
+      duration: 500,
+      delay: anime.stagger(150, { start: 300 }),
+      easing: 'easeOutBack'
+    });
+
+    // Experience items - slide from left with stagger
+    anime({
+      targets: '.experience-content',
+      opacity: [0, 1],
+      translateX: [-40, 0],
+      duration: 700,
+      delay: anime.stagger(200, { start: 400 }),
+      easing: 'easeOutCubic'
+    });
   }
 
-  const partes: string[] = [];
+  calcularTiempoTranscurrido(inicio: string | undefined): string {
+    if (!inicio) return '';
 
-  if (anios > 0) {
-    partes.push(`${anios} Año${anios > 1 ? 's' : ''}`);
-    if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
-    // No incluimos días si ya pasó al menos 1 año
-  } else {
-    if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
-    if (dias > 0) partes.push(`${dias} Día${dias > 1 ? 's' : ''}`);
+    const fechaInicio = new Date(inicio);
+    if (isNaN(fechaInicio.getTime())) return 'Fecha inválida';
+
+    const hoy = new Date();
+
+    let anios = hoy.getFullYear() - fechaInicio.getFullYear();
+    let meses = hoy.getMonth() - fechaInicio.getMonth();
+    let dias = hoy.getDate() - fechaInicio.getDate();
+
+    if (dias < 0) {
+      meses--;
+      const mesAnterior = new Date(hoy.getFullYear(), hoy.getMonth(), 0);
+      dias += mesAnterior.getDate();
+    }
+
+    if (meses < 0) {
+      anios--;
+      meses += 12;
+    }
+
+    const partes: string[] = [];
+
+    if (anios > 0) {
+      partes.push(`${anios} Año${anios > 1 ? 's' : ''}`);
+      if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
+    } else {
+      if (meses > 0) partes.push(`${meses} Mes${meses > 1 ? 'es' : ''}`);
+      if (dias > 0) partes.push(`${dias} Día${dias > 1 ? 's' : ''}`);
+    }
+
+    const mesesNombres = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+      'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const mesInicio = mesesNombres[fechaInicio.getMonth()];
+    const anioInicio = fechaInicio.getFullYear();
+
+    return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' y ')}`;
   }
-
-  const mesesNombres = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-                        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-  const mesInicio = mesesNombres[fechaInicio.getMonth()];
-  const anioInicio = fechaInicio.getFullYear();
-
-  return `${mesInicio} ${anioInicio} – Presente · ${partes.join(' y ')}`;
-}
 
 
 }
