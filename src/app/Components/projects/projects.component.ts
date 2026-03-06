@@ -27,13 +27,13 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       title: 'SIGLAD Aplication API RESTful (Project University)',
       description: 'Responsiva para la gestion aduanal de comercio internacional.',
       stats: 'Aplicación web construida con tecnologias Express, Java Script, CSS, AnimeJs, Sweet Alert, Postgre SQL, Render',
-      image: '/images/HospitalApp.png',
-      image2: '/images/HospitalApp2.png',
-      image3: '/images/HospitalApp3.png',
+      image: '/images/SIGLADLOGIN.png',
+      image2: '/images/SIGLADDUCAS.jpg',
+      image3: '/images/SIGLADADMIN.jpg',
       technologies: ['Express', 'Postgre SQL', 'AnimeJs', 'Java Script'],
       links: {
         code: 'https://siglad-proyectowebapp.onrender.com/',
-        code2: 'https://github.com/Yeysoon/Proyecto-Java-Spring-Hospital',
+        code2: 'https://github.com/Yeysoon/SIGLAD-ProyectoWebApp',
       }
     },
     {
