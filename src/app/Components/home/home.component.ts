@@ -10,6 +10,8 @@ import anime from 'animejs/lib/anime.es.js';
 })
 export class HomeComponent implements AfterViewInit {
 
+  showPhotoModal = false;
+
   socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Yeysoon', icon: '/icons/Github.png' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yeysoon/', icon: '/icons/Linkedin.png' },
@@ -114,5 +116,13 @@ export class HomeComponent implements AfterViewInit {
       delay: anime.stagger(200, { start: 1400 }),
       easing: 'easeOutCubic'
     });
+  }
+
+  openPhotoModal(): void {
+    this.showPhotoModal = true;
+  }
+
+  closePhotoModal(): void {
+    this.showPhotoModal = false;
   }
 }
