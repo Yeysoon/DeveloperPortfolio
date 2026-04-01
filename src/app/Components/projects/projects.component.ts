@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
         '/images/NDS7.png',
         '/images/NDS8.png',
       ],
-      technologies: ['React 18', 'Vite', 'TailwindCSS', 'EmailJS', 'Vercel', 'Vibe Coding'],
+      technologies: ['React 18', 'Vite', 'TailwindCSS', 'EmailJS', 'Vercel'],
       links: {
         preview: 'https://nacionalesdeliveryservices.com/',
         code2: 'https://github.com/implementacionnacionalesds2026/NacionalesDeliveryServicesWeb',
