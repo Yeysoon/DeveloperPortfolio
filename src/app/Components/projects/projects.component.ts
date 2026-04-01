@@ -24,7 +24,7 @@ export interface Project {
 export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
   projects: Project[] = [
     {
-      title: 'Landing Nacionales Delivery Services',
+      title: 'Landing Page | Nacionales Delivery Services',
       description: 'Landing page oficial de empresa de servicios de delivery a nivel nacional, construida con metodología Vibe Coding.',
       stats: 'Sitio web desarrollado con React 18, Vite, TailwindCSS, EmailJS, React Router DOM, AnimeJS, Lucide React y desplegado en Vercel.',
       images: [
