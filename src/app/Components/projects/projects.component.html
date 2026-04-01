@@ -9,12 +9,10 @@
       <div class="project-grid">
         <div class="project-image-container" [attr.data-title]="project.title">
           <div class="slider">
-            <img [src]="project.image" [alt]="project.title" class="project-image"
-              [class.active]="currentSlides[project.title] === 0">
-            <img [src]="project.image2" [alt]="project.title" class="project-image"
-              [class.active]="currentSlides[project.title] === 1">
-            <img [src]="project.image3" [alt]="project.title" class="project-image"
-              [class.active]="currentSlides[project.title] === 2">
+            @for (img of project.images; track img) {
+              <img [src]="img" [alt]="project.title" class="project-image"
+                [class.active]="currentSlides[project.title] === $index">
+            }
           </div>
         </div>
         <div class="project-info">

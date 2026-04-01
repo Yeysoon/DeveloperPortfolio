@@ -6,9 +6,7 @@ export interface Project {
   title: string;
   description: string;
   stats: string;
-  image: string;
-  image2: string;
-  image3: string;
+  images: string[];
   technologies: string[];
   links: {
     preview?: string;
@@ -26,12 +24,30 @@ export interface Project {
 export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
   projects: Project[] = [
     {
+      title: 'Landing Nacionales Delivery Services',
+      description: 'Landing page oficial de empresa de servicios de delivery a nivel nacional, construida con metodología Vibe Coding.',
+      stats: 'Sitio web desarrollado con React 18, Vite, TailwindCSS, EmailJS, React Router DOM, AnimeJS, Lucide React y desplegado en Vercel.',
+      images: [
+        '/images/NDS1.png',
+        '/images/NDS2.png',
+        '/images/NDS3.png',
+        '/images/NDS4.png',
+        '/images/NDS5.png',
+        '/images/NDS6.png',
+        '/images/NDS7.png',
+        '/images/NDS8.png',
+      ],
+      technologies: ['React 18', 'Vite', 'TailwindCSS', 'EmailJS', 'Vercel', 'Vibe Coding'],
+      links: {
+        preview: 'https://nacionalesdeliveryservices.com/',
+        code2: 'https://github.com/implementacionnacionalesds2026/NacionalesDeliveryServicesWeb',
+      }
+    },
+    {
       title: 'SIGLAD Aplication API RESTful (Project University)',
       description: 'Responsiva para la gestion aduanal de comercio internacional.',
       stats: 'Aplicación web construida con tecnologias Express, Java Script, CSS, AnimeJs, Sweet Alert, Postgre SQL, Render',
-      image: '/images/SIGLADLOGIN.png',
-      image2: '/images/SIGLADDUCAS.jpg',
-      image3: '/images/SIGLADADMIN.jpg',
+      images: ['/images/SIGLADLOGIN.png', '/images/SIGLADDUCAS.jpg', '/images/SIGLADADMIN.jpg'],
       technologies: ['Express', 'Postgre SQL', 'AnimeJs', 'Java Script'],
       links: {
         preview: 'https://siglad-proyectowebapp.onrender.com/',
@@ -42,9 +58,7 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
       title: 'Hospital Aplication API RESTful (Project University)',
       description: 'Responsiva para la gestion administrativa de un hospital.',
       stats: 'Aplicación web construida con tecnologias Java, Spring Boot, Bootstrap, SweetAlert, Angular CLI, CSS, HTML, TypeScript Postgre SQL.',
-      image: '/images/HospitalApp.png',
-      image2: '/images/HospitalApp2.png',
-      image3: '/images/HospitalApp3.png',
+      images: ['/images/HospitalApp.png', '/images/HospitalApp2.png', '/images/HospitalApp3.png'],
       technologies: ['Angular CLI', 'Postgre SQL', 'Spring Boot', 'Java SE'],
       links: {
         code: 'https://github.com/Yeysoon/Proyecto-Java-Angular-Hospital',
@@ -55,9 +69,7 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
       title: 'MaxiAbarrotes with JSP Java SE (Project University)',
       description: 'Aplicación Web de Abarrotería con Integración Java, Maven y MySQL',
       stats: 'Aplicacion web onstruida con tecnologias Java SE, Maven, Bootstrap, Tomcat, CSS, HTML, JSP(Java Server Pages), MySQL',
-      image: '/images/Abarroteria.png',
-      image2: '/images/Abarroteria2.png',
-      image3: '/images/Abarroteria3.png',
+      images: ['/images/Abarroteria.png', '/images/Abarroteria2.png', '/images/Abarroteria3.png'],
       technologies: ['Java SE', 'Bootstrap', 'Maven', 'MySQL', 'Tomcat'],
       links: {
         code2: 'https://github.com/Yeysoon/Proyecto-Abarroteria-Java-Maven-MYSQL',
@@ -90,7 +102,7 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private startAutoSlide(project: Project) {
     this.intervalIds[project.title] = setInterval(() => {
-      this.currentSlides[project.title] = (this.currentSlides[project.title] + 1) % 3;
+      this.currentSlides[project.title] = (this.currentSlides[project.title] + 1) % project.images.length;
     }, 3000);
   }
 
