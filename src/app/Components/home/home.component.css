@@ -555,3 +555,67 @@
     width: auto;
   }
 }
+
+/* ===== HOME BIO - SKILL BADGES ===== */
+.home-skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.home-badge {
+  background: rgba(255, 215, 0, 0.12);
+  color: #FFD700;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.25s, transform 0.2s;
+  cursor: default;
+}
+
+.home-badge:hover {
+  background: rgba(255, 215, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== HOME BIO - QUOTE BLOCK ===== */
+.home-quote {
+  position: relative;
+  border-left: 3px solid #FFD700;
+  margin: 16px 0;
+  padding: 10px 16px 10px 20px;
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.home-quote-icon {
+  font-size: 2rem;
+  color: #FFD700;
+  line-height: 0;
+  vertical-align: -0.5rem;
+  margin-right: 4px;
+  font-family: Georgia, serif;
+}
+
+.home-quote cite {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #FFD700;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.home-intro,
+.home-closing {
+  line-height: 1.7;
+  margin-bottom: 4px;
+}

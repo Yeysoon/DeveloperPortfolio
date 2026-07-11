@@ -1,23 +1,15 @@
 @keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 17%;
-  }
+  from { width: 0; }
+  to   { width: 17%; }
 }
 
 @keyframes blinkCaret {
-  100% {
-    border-color: white;
-  }
+  100% { border-color: white; }
 }
 
 .typewriter {
   overflow: hidden;
   border-right: .15em solid orange;
-  /* Efecto del cursor de escritura */
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
@@ -26,50 +18,165 @@
     blinkCaret 0s step-end infinite;
 }
 
-
-
+/* ===== LAYOUT ===== */
 .about-me-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 40px;
   box-sizing: border-box;
   margin-top: 250px;
+  gap: 60px;
 }
 
 .profile-pic {
   width: 310px;
   height: 410px;
   border-radius: 2.5%;
-  margin-right: 110px;
-  /* Separación prudente de la foto */
+  flex-shrink: 0;
   object-fit: cover;
-  /* Para asegurar que la imagen se ajuste bien */
   transform: rotate(4.1deg);
   border: 0.1px solid rgba(64, 107, 163, 0.2);
-  /* Borde negro muy delgado y transparente */
   animation:
     typewriter 0.5s steps(40, end) 1s 1 normal both,
     blinkCaret 0s step-end infinite;
 }
 
 .about-me-content {
-  max-width: 600px;
+  max-width: 640px;
   text-align: justify;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* Centrar contenido verticalmente */
 }
 
+/* ===== TITLE ===== */
 .about-me-content h2 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
   color: #FFD700;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
-.about-me-content p {
-  line-height: 1.6;
+/* ===== INTRO ===== */
+.about-intro {
+  line-height: 1.75;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+}
+
+/* ===== BIO TIMELINE ===== */
+.bio-timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 28px;
+}
+
+/* Línea vertical */
+.bio-timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.bio-event {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/* Punto centrado sobre la línea (línea en x=4, dot 10px: left = 4-5 = -1 desde bio-timeline = -29 desde bio-event) */
+.bio-event::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.bio-year {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 4px;
+}
+
+.bio-body h4 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bio-body p {
+  margin: 0 0 8px 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===== PERSONAL SECTION ===== */
+.about-personal {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.about-personal h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.about-personal p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 10px;
+}
+
+/* ===== QUOTE ===== */
+.about-quote {
+  border-left: 2px solid rgba(255, 255, 255, 0.25);
+  margin: 14px 0;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.about-quote-icon {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 0;
+  vertical-align: -0.4rem;
+  margin-right: 4px;
+  font-family: Georgia, serif;
+}
+
+.about-quote cite {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
@@ -79,13 +186,12 @@
     align-items: center;
     margin-top: 160px;
     padding: 15px;
+    gap: 24px;
   }
 
   .profile-pic {
     width: 200px;
     height: 260px;
-    margin-right: 0;
-    margin-bottom: 20px;
   }
 
   .about-me-content {

@@ -24,6 +24,23 @@ export interface Project {
 export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
   projects: Project[] = [
     {
+      title: 'Nexgo Delivery | Sistema de Paquetería Nacional',
+      description: 'Plataforma responsiva para gestión y rastreo en tiempo real de paquetería nacional con roles dedicados (Admin, Cliente y Repartidor).',
+      stats: 'Desarrollado con Angular, Node.js, Express y PostgreSQL. Integra geolocalización en tiempo real vía Socket.io + Google Maps, seguridad con JWT/Bcrypt y despliegue en Railway/Vercel.',
+      images: [
+        '/images/Nexgo.png',
+        '/images/Nexgo1.png',
+        '/images/Nexgo2.png',
+        '/images/Nexgo3.png',
+        '/images/Nexgo4.png',
+        '/images/Nexgo5.png'
+      ],
+      technologies: ['Angular', 'Node.js', 'Express', 'PostgreSQL', 'Google Maps API'],
+      links: {
+        preview: 'https://nexgo.delivery'
+      }
+    },
+    {
       title: 'Landing Page | Nacionales Delivery Services',
       description: 'Landing page oficial de empresa de servicios de delivery a nivel nacional, construida con metodología Vibe Coding.',
       stats: 'Sitio web desarrollado con React 18, Vite, TailwindCSS, EmailJS, React Router DOM, AnimeJS, Lucide React y desplegado en Vercel.',

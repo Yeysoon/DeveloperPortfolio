@@ -48,7 +48,8 @@
               Code
             </a>
             }
-            <a [href]="project.links.code2" class="button">
+            @if (project.links.code2) {
+            <a [href]="project.links.code2" target="_blank" class="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path
@@ -56,6 +57,7 @@
               </svg>
               Code
             </a>
+            }
           </div>
         </div>
       </div>
