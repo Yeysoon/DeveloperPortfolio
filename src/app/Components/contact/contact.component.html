@@ -12,7 +12,7 @@
       </div>
       <div>
         <label for="email"><strong>Correo Electrónico:</strong></label>
-        <input type="email" id="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <input type="email" id="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
           Por favor, ingresa un correo electrónico válido.
         </div>

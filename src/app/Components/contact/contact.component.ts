@@ -100,24 +100,40 @@ export class ContactComponent implements AfterViewInit {
   checkFormValidity(contactForm: any) {
     if (contactForm.invalid) {
       const missingFields = [];
-      if (!this.contact.name) missingFields.push('Nombre');
-      if (!this.contact.email) missingFields.push('Correo Electrónico');
-      if (!this.contact.message) missingFields.push('Mensaje');
-      const missingFieldsText = missingFields.join(', ');
+      if (!this.contact.name?.trim()) missingFields.push('Nombre');
+      if (!this.contact.email?.trim()) missingFields.push('Correo Electrónico');
+      if (!this.contact.message?.trim()) missingFields.push('Mensaje');
 
-      Swal.fire({
-        title: 'Error',
-        text: `Por favor, completa todos los campos. Te falta ${missingFieldsText}.`,
-        icon: 'error',
-        confirmButtonText: 'Volver'
-      });
+      if (missingFields.length > 0) {
+        const missingFieldsText = missingFields.join(', ');
+        Swal.fire({
+          title: 'Error',
+          text: `Por favor, completa todos los campos. Te falta ${missingFieldsText}.`,
+          icon: 'error',
+          confirmButtonText: 'Volver'
+        });
+      } else if (contactForm.controls['email']?.invalid) {
+        Swal.fire({
+          title: 'Error',
+          text: 'Por favor, ingresa un correo electrónico válido.',
+          icon: 'error',
+          confirmButtonText: 'Volver'
+        });
+      } else {
+        Swal.fire({
+          title: 'Error',
+          text: 'Por favor, revisa que los datos del formulario sean válidos.',
+          icon: 'error',
+          confirmButtonText: 'Volver'
+        });
+      }
     } else {
       this.onSubmit(contactForm);
     }
   }
 
   onSubmit(contactForm: any) {
-    emailjs.sendForm('service_4p6nbnn', 'template_xxg2k1e', '#contactForm', 'pP79nKH1V7EFkYfKx')
+    emailjs.sendForm('service_ivef7id', 'template_xxg2k1e', '#contactForm', 'pP79nKH1V7EFkYfKx')
       .then((result: { text: any; }) => {
         console.log('Mensaje enviado:', result.text);
         Swal.fire({
